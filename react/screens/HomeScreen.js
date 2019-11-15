@@ -4,13 +4,13 @@ import {
   Image,
   Platform,
   ScrollView,
-  Button,
   Alert,
   StyleSheet,
-  Text,
   TouchableOpacity,
   View,
 } from 'react-native';
+
+import { Button, Text } from 'react-native-elements';
 
 import { MonoText } from '../components/StyledText';
 
@@ -33,15 +33,20 @@ export default function HomeScreen() {
         <View>
         <View style={styles.getStartedContainer}>
 
-          <Text style={styles.getStartedText}>{"\n"}Welcome to Stardust!{"\n"}{"\n"}{"\n"}{"\n"}</Text>
+          <Text h4>{"\n"}Welcome to Stardust!{"\n"}</Text>
+          <Text>Let's go on a...{"\n"}{"\n"}</Text>
         </View>
         <View style={styles.fixToText}>
           <Button
             title="Roadtrip"
+            type="outline"
+            raised="True"
             onPress={() => Alert.alert('Left button pressed')}
           />
           <Button
-            title="Adventure"
+            title="Journey"
+            type="outline"
+            raised="True"
             onPress={() => Alert.alert('Right button pressed')}
           />
         </View>
