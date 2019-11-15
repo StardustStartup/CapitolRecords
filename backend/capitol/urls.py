@@ -19,7 +19,6 @@ from mainapp.views import ArtistList, ArtistDetail, SongList, SongDetail, Concer
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', api_root),
     path('artists/', ArtistList.as_view()),
     path('artists/<int:pk>/', ArtistDetail.as_view()),
     path('songs/', SongList.as_view()),
