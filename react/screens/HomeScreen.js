@@ -4,6 +4,8 @@ import {
   Image,
   Platform,
   ScrollView,
+  Button,
+  Alert,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -22,49 +24,32 @@ export default function HomeScreen() {
           <Image
             source={
               __DEV__
-                ? require('../assets/images/robot-dev.png')
-                : require('../assets/images/robot-prod.png')
+                ? require('../assets/images/logo1.jpg')
+                : require('../assets/images/logo1.jpg')
             }
             style={styles.welcomeImage}
           />
         </View>
-
+        <View>
         <View style={styles.getStartedContainer}>
-          <DevelopmentModeNotice />
 
-          <Text style={styles.getStartedText}>Get started by opening</Text>
-
-          <View
-            style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
-            <MonoText>screens/HomeScreen.js</MonoText>
-          </View>
-
-          <Text style={styles.getStartedText}>
-            Change this text and your app will automatically reload.
-          </Text>
+          <Text style={styles.getStartedText}>{"\n"}Welcome to Stardust!{"\n"}{"\n"}{"\n"}{"\n"}</Text>
         </View>
-
-        <View style={styles.helpContainer}>
-          <TouchableOpacity onPress={handleHelpPress} style={styles.helpLink}>
-            <Text style={styles.helpLinkText}>
-              Help, it didn’t automatically reload!
-            </Text>
-          </TouchableOpacity>
-        </View>
-      </ScrollView>
-
-      <View style={styles.tabBarInfoContainer}>
-        <Text style={styles.tabBarInfoText}>
-          This is a tab bar. You can edit it in:
-        </Text>
-
-        <View
-          style={[styles.codeHighlightContainer, styles.navigationFilename]}>
-          <MonoText style={styles.codeHighlightText}>
-            navigation/MainTabNavigator.js
-          </MonoText>
+        <View style={styles.fixToText}>
+          <Button
+            title="Roadtrip"
+            onPress={() => Alert.alert('Left button pressed')}
+          />
+          <Button
+            title="Adventure"
+            onPress={() => Alert.alert('Right button pressed')}
+          />
         </View>
       </View>
+
+
+
+      </ScrollView>
     </View>
   );
 }
@@ -111,6 +96,7 @@ function handleHelpPress() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    marginTop: 50,
     backgroundColor: '#fff',
   },
   developmentModeText: {
@@ -122,6 +108,9 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     paddingTop: 30,
+  },
+  container3: {
+    flex: 3,
   },
   welcomeContainer: {
     alignItems: 'center',
@@ -138,6 +127,7 @@ const styles = StyleSheet.create({
   getStartedContainer: {
     alignItems: 'center',
     marginHorizontal: 50,
+    flex: 2,
   },
   homeScreenFilename: {
     marginVertical: 7,
@@ -195,4 +185,12 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#2e78b7',
   },
+  fixToText: {
+    marginLeft: 50,
+    marginRight: 50,
+  flexDirection: 'row',
+  justifyContent: 'space-between',
+},
+
+
 });
