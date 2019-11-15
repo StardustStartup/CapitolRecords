@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from mainapp.views import ArtistList, ArtistDetail, SongList, SongDetail, ConcertList, ConcertDetail, api_root
+from mainapp.views import ArtistList, ArtistDetail, SongList, SongDetail, ConcertList, ConcertDetail
 
 urlpatterns = [
     path('admin/', admin.site.urls),
