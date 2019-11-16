@@ -30,5 +30,5 @@ def createRadio(priorSongFact, nextSongName, nextArtist, nextArtistFact, outFile
               accept='audio/wav'        
           ).get_result().content)
 
-createRadio("beep is a big fookin chungis bigga ligga tigga bitch.", "bruh", "boop", "skraa", "bruh.wav")
+createRadio("beep is a big fookin chungis bigga ligga tigga bit.", "bruh", "boop", "skraa", "bruh.wav")
 
