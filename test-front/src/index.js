@@ -13,11 +13,6 @@ import {
 
 import { Button, Text } from 'react-native-elements';
 
-//import { colors } from './components/ui/variables';
-//import { Box } from './components/ui';
-
-//import { AuthProvider } from './screens/OnboardingStart';
-
 import HomeScreen from './screens/HomeScreen';
 import TripScreen from './screens/TripScreen';
 import JourneyScreen from './screens/JourneyScreen';
