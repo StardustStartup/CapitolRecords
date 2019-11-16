@@ -77,7 +77,7 @@ const PlayerStack = createStackNavigator(
 
 
 const App = createAppContainer(
-  createSwitchNavigator(
+  createBottomTabNavigator(
     {
       Home: HomeStack,
       Trip: TripStack,
@@ -91,4 +91,4 @@ const App = createAppContainer(
 );
 
 
-export default App;
+export default Bottom;
