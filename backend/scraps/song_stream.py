@@ -18,6 +18,10 @@ def get_artist_id(artist):
   artist_id = response['artists'][0]['artist_id']
   return artist_id
 
+def get_song_hit(artist_id,hit):
+  works_url = base_url + '/works/' + str(artist_id)
+  response = requests.get(works_url, headers=headers)
+  return response
 
 def request_meta(track):
   track_url = base_url + '/tracks/' + track
@@ -36,6 +40,10 @@ def request_stream(track):
 artist = "Eminem"
 songName = "Rap God"
 track = "USWWW0128853"
-#print(get_artist_id(artist))
-print(request_stream(track))
+
+artist_id = get_artist_id(artist)
+song_0 = get_song_hit(artist_id,0)
+print(song_0.json())
+
+#print(request_stream(track))
 
