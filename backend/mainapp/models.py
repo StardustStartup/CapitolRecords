@@ -23,3 +23,10 @@ class Concert(models.Model):
     location = models.PointField()
     date = models.DateTimeField()
     pref_link = models.IntegerField()
+
+class FSM(models.Model):
+    id = models.AutoField(primary_key=True)
+    genre = models.CharField(max_length=100)
+    mood = models.CharField(max_length=100)
+    location = models.CharField(max_length=100)
+    current_song = models.CharField(max_length=100)
