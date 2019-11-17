@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from .models import Artist, Song, Concert
-from .serializers import ArtistSerializer, SongSerializer, ConcertSerializer
+from .models import Artist, Song, Concert, FSM
+from .serializers import ArtistSerializer, SongSerializer, ConcertSerializer, FSMSerializer
 from rest_framework.generics import ListCreateAPIView,RetrieveUpdateDestroyAPIView
 from django.views.generic.base import TemplateView
 from mainapp import services
@@ -35,3 +35,11 @@ class GeniusWrapper(TemplateView):
     def get(self, request):
         output = services.getSongFact("Rap God", "Eminem")
         return HttpResponse(output, content_type='application/json')
+
+class FSMList(ListCreateAPIView):
+    queryset = FSM.objects.all()
+    serializer_class = FSMSerializer
+
+class FSMDetail(RetrieveUpdateDestroyAPIView):
+    queryset = FSM.objects.all()
+    serializer_class = FSMSerializer

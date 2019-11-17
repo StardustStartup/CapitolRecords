@@ -33,3 +33,14 @@ class ConcertSerializer(serializers.ModelSerializer):
             'date',
             'pref_link',
         )
+
+class FSMSerializer(serializers.ModelSerializer):
+    class Meta:
+        models = models.FSM
+        fields = (
+            'id,'
+            'genre',
+            'mood',
+            'location',
+            'current_song',
+        )
