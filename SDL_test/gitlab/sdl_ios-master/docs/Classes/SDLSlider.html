@@ -1,0 +1,322 @@
+<h1>SDLSlider Class Reference</h1>
+
+<h3>Section Contents</h3>
+
+<ul>
+  <li><a href="#section--initWithNumTicks:position:sliderHeader:sliderFooters:timeout:cancelID:">-initWithNumTicks:position:sliderHeader:sliderFooters:timeout:cancelID:</a></li>
+  <li><a href="#section--initWithNumTicks:position:">-initWithNumTicks:position:</a></li>
+  <li><a href="#section--initWithNumTicks:position:sliderHeader:sliderFooter:timeout:">-initWithNumTicks:position:sliderHeader:sliderFooter:timeout:</a></li>
+  <li><a href="#section--initWithNumTicks:position:sliderHeader:sliderFooters:timeout:">-initWithNumTicks:position:sliderHeader:sliderFooters:timeout:</a></li>
+  <li><a href="#section-numTicks">numTicks</a></li>
+  <li><a href="#section-position">position</a></li>
+  <li><a href="#section-sliderHeader">sliderHeader</a></li>
+  <li><a href="#section-sliderFooter">sliderFooter</a></li>
+  <li><a href="#section-timeout">timeout</a></li>
+  <li><a href="#section-cancelID">cancelID</a></li>
+</ul>
+
+<h3>Overview</h3>
+
+<p>Creates a full screen or pop-up overlay (depending on platform) with a single user controlled slider.</p>
+
+<p>If connecting to SDL Core v.6.0+, the slider can be canceled programmatically using the <code>cancelID</code>. On older versions of SDL Core, the slider will persist until the user has interacted with the slider or the specified timeout has elapsed.</p>
+
+<p>Since SDL 2.0</p>
+
+
+<section class="section task-group-section">
+  <h3 id="section--initWithNumTicks:position:sliderHeader:sliderFooters:timeout:cancelID:">
+      -initWithNumTicks:position:sliderHeader:sliderFooters:timeout:cancelID:
+  </h3>
+  
+  <p>Convenience init with all parameters.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithNumTicks</span><span class="p">:(</span><span class="n">UInt8</span><span class="p">)</span><span class="nv">numTicks</span>
+                                <span class="nf">position</span><span class="p">:(</span><span class="n">UInt8</span><span class="p">)</span><span class="nv">position</span>
+                            <span class="nf">sliderHeader</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">sliderHeader</span>
+                           <span class="nf">sliderFooters</span><span class="p">:</span>
+                               <span class="p">(</span><span class="n">nullable</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">sliderFooters</span>
+                                 <span class="nf">timeout</span><span class="p">:(</span><span class="n">UInt16</span><span class="p">)</span><span class="nv">timeout</span>
+                                <span class="nf">cancelID</span><span class="p">:(</span><span class="n">UInt32</span><span class="p">)</span><span class="nv">cancelID</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">numTicks</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">,</span> <span class="nv">position</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">,</span> <span class="nv">sliderHeader</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">sliderFooters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?,</span> <span class="nv">timeout</span><span class="p">:</span> <span class="kt">UInt16</span><span class="p">,</span> <span class="nv">cancelID</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">)</span></code></pre>
+
+  
+  
+  <h4>Parameters</h4>
+  <dl>
+      <dt>numTicks</dt>
+      <dd><p>Number of selectable items on a horizontal axis</p></dd>
+      <dt>position</dt>
+      <dd><p>Initial position of slider control</p></dd>
+      <dt>sliderHeader</dt>
+      <dd><p>Text header to display</p></dd>
+      <dt>sliderFooters</dt>
+      <dd><p>Text footers to display. See the <code><a href="../Classes/SDLSlider.html#/c:objc(cs)SDLSlider(py)sliderFooter">sliderFooter</a></code> documentation for how placing various numbers of footers will affect the display</p></dd>
+      <dt>timeout</dt>
+      <dd><p>Indicates how long of a timeout from the last action (i.e. sliding control resets timeout)</p></dd>
+      <dt>cancelID</dt>
+      <dd><p>An ID for this specific slider to allow cancellation through the <code>CancelInteraction</code> RPC.</p></dd>
+  </dl>
+  <div>
+    <h4>Return Value</h4>
+    <p>An SDLSlider object</p>
+  </div>
+  
+  <h3 id="section--initWithNumTicks:position:">
+      -initWithNumTicks:position:
+  </h3>
+  
+  <p>Creates a slider with only the number of ticks and position. Note that this is not enough to get a SUCCESS response. You must supply additional data. See below for required parameters.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithNumTicks</span><span class="p">:(</span><span class="n">UInt8</span><span class="p">)</span><span class="nv">numTicks</span>
+                                <span class="nf">position</span><span class="p">:(</span><span class="n">UInt8</span><span class="p">)</span><span class="nv">position</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">numTicks</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">,</span> <span class="nv">position</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">)</span></code></pre>
+
+  
+  
+  <h4>Parameters</h4>
+  <dl>
+      <dt>numTicks</dt>
+      <dd><p>Number of selectable items on a horizontal axis</p></dd>
+      <dt>position</dt>
+      <dd><p>Initial position of slider control</p></dd>
+  </dl>
+  <div>
+    <h4>Return Value</h4>
+    <p>An SDLSlider object</p>
+  </div>
+  
+  <h3 id="section--initWithNumTicks:position:sliderHeader:sliderFooter:timeout:">
+      -initWithNumTicks:position:sliderHeader:sliderFooter:timeout:
+  </h3>
+  
+  <p>Creates a slider with all required data and a static footer (or no footer).</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithNumTicks</span><span class="p">:(</span><span class="n">UInt8</span><span class="p">)</span><span class="nv">numTicks</span>
+                                <span class="nf">position</span><span class="p">:(</span><span class="n">UInt8</span><span class="p">)</span><span class="nv">position</span>
+                            <span class="nf">sliderHeader</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">sliderHeader</span>
+                            <span class="nf">sliderFooter</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">sliderFooter</span>
+                                 <span class="nf">timeout</span><span class="p">:(</span><span class="n">UInt16</span><span class="p">)</span><span class="nv">timeout</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">numTicks</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">,</span> <span class="nv">position</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">,</span> <span class="nv">sliderHeader</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">sliderFooter</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">timeout</span><span class="p">:</span> <span class="kt">UInt16</span><span class="p">)</span></code></pre>
+
+  
+  
+  <h4>Parameters</h4>
+  <dl>
+      <dt>numTicks</dt>
+      <dd><p>Number of selectable items on a horizontal axis</p></dd>
+      <dt>position</dt>
+      <dd><p>Initial position of slider control</p></dd>
+      <dt>sliderHeader</dt>
+      <dd><p>Text header to display</p></dd>
+      <dt>sliderFooter</dt>
+      <dd><p>Text footer to display</p></dd>
+      <dt>timeout</dt>
+      <dd><p>Indicates how long of a timeout from the last action (i.e. sliding control resets timeout)</p></dd>
+  </dl>
+  <div>
+    <h4>Return Value</h4>
+    <p>An SDLSlider object</p>
+  </div>
+  
+  <h3 id="section--initWithNumTicks:position:sliderHeader:sliderFooters:timeout:">
+      -initWithNumTicks:position:sliderHeader:sliderFooters:timeout:
+  </h3>
+  
+  <p>Creates an slider with all required data and a dynamic footer (or no footer).</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithNumTicks</span><span class="p">:(</span><span class="n">UInt8</span><span class="p">)</span><span class="nv">numTicks</span>
+                                <span class="nf">position</span><span class="p">:(</span><span class="n">UInt8</span><span class="p">)</span><span class="nv">position</span>
+                            <span class="nf">sliderHeader</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">sliderHeader</span>
+                           <span class="nf">sliderFooters</span><span class="p">:</span>
+                               <span class="p">(</span><span class="n">nullable</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">sliderFooters</span>
+                                 <span class="nf">timeout</span><span class="p">:(</span><span class="n">UInt16</span><span class="p">)</span><span class="nv">timeout</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">numTicks</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">,</span> <span class="nv">position</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">,</span> <span class="nv">sliderHeader</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">sliderFooters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?,</span> <span class="nv">timeout</span><span class="p">:</span> <span class="kt">UInt16</span><span class="p">)</span></code></pre>
+
+  
+  
+  <h4>Parameters</h4>
+  <dl>
+      <dt>numTicks</dt>
+      <dd><p>Number of selectable items on a horizontal axis</p></dd>
+      <dt>position</dt>
+      <dd><p>Initial position of slider control</p></dd>
+      <dt>sliderHeader</dt>
+      <dd><p>Text header to display</p></dd>
+      <dt>sliderFooters</dt>
+      <dd><p>Text footers to display</p></dd>
+      <dt>timeout</dt>
+      <dd><p>Indicates how long of a timeout from the last action (i.e. sliding control resets timeout)</p></dd>
+  </dl>
+  <div>
+    <h4>Return Value</h4>
+    <p>An SDLSlider object</p>
+  </div>
+  
+  <h3 id="section-numTicks">
+      numTicks
+  </h3>
+  
+  <p>Represents a number of selectable items on a horizontal axis.</p>
+
+<p>Integer, Required, Min value: 2, Max Value: 26</p>
+
+<p>Since SDL 2.0</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSNumber</span><span class="o">&lt;</span><span class="n"><a href="../Protocols.html#/c:objc(pl)SDLInt">SDLInt</a></span><span class="o">&gt;</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">numTicks</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">numTicks</span><span class="p">:</span> <span class="kt">NSNumber</span> <span class="o">&amp;</span> <span class="kt"><a href="../Protocols.html#/c:objc(pl)SDLInt">SDLInt</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-position">
+      position
+  </h3>
+  
+  <p>Initial position of slider control (cannot exceed numTicks).</p>
+
+<p>Integer, Required, Min Value: 1, Max Value: 26</p>
+
+<p>@since SDL 2.0</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSNumber</span><span class="o">&lt;</span><span class="n"><a href="../Protocols.html#/c:objc(pl)SDLInt">SDLInt</a></span><span class="o">&gt;</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">position</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">position</span><span class="p">:</span> <span class="kt">NSNumber</span> <span class="o">&amp;</span> <span class="kt"><a href="../Protocols.html#/c:objc(pl)SDLInt">SDLInt</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-sliderHeader">
+      sliderHeader
+  </h3>
+  
+  <p>Text header to display.</p>
+
+<p>String, Required, Max length 500 chars</p>
+
+<p>Since SDL 2.0</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">sliderHeader</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">sliderHeader</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-sliderFooter">
+      sliderFooter
+  </h3>
+  
+  <p>Text footer to display.</p>
+
+<p>For a static text footer, only one footer string shall be provided in the array.
+For a dynamic text footer, the number of footer text string in the array must match the numTicks value.
+For a dynamic text footer, text array string should correlate with potential slider position index.
+If omitted on supported displays, no footer text shall be displayed.</p>
+
+<p>Array of Strings, Optional, Array length 1 - 26, Max length 500 chars</p>
+
+<p>Since SDL 2.0</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">sliderFooter</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">sliderFooter</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-timeout">
+      timeout
+  </h3>
+  
+  <p>App defined timeout. Indicates how long of a timeout from the last action (i.e. sliding control resets timeout). If omitted, the value is set to 10 seconds.</p>
+
+<p>Integer, Optional, Min value: 1000, Max value: 65535, Default value: 10000</p>
+
+<p>Since SDL 2.0</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSNumber</span><span class="o">&lt;</span><span class="n"><a href="../Protocols.html#/c:objc(pl)SDLInt">SDLInt</a></span><span class="o">&gt;</span> <span class="o">*</span><span class="n">timeout</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">timeout</span><span class="p">:</span> <span class="p">(</span><span class="kt">NSNumber</span> <span class="o">&amp;</span> <span class="kt"><a href="../Protocols.html#/c:objc(pl)SDLInt">SDLInt</a></span><span class="p">)?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-cancelID">
+      cancelID
+  </h3>
+  
+  <p>An ID for this specific slider to allow cancellation through the <code>CancelInteraction</code> RPC.</p>
+
+<p>Integer, Optional</p>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    SDLCancelInteraction
+@since SDL 6.0
+
+</div>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSNumber</span><span class="o">&lt;</span><span class="n"><a href="../Protocols.html#/c:objc(pl)SDLInt">SDLInt</a></span><span class="o">&gt;</span> <span class="o">*</span><span class="n">cancelID</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">cancelID</span><span class="p">:</span> <span class="p">(</span><span class="kt">NSNumber</span> <span class="o">&amp;</span> <span class="kt"><a href="../Protocols.html#/c:objc(pl)SDLInt">SDLInt</a></span><span class="p">)?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+</section>

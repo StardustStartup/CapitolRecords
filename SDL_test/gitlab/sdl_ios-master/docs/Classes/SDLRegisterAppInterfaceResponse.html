@@ -1,0 +1,492 @@
+<h1>SDLRegisterAppInterfaceResponse Class Reference</h1>
+
+<h3>Section Contents</h3>
+
+<ul>
+  <li><a href="#section-syncMsgVersion">syncMsgVersion</a></li>
+  <li><a href="#section-sdlMsgVersion">sdlMsgVersion</a></li>
+  <li><a href="#section-language">language</a></li>
+  <li><a href="#section-hmiDisplayLanguage">hmiDisplayLanguage</a></li>
+  <li><a href="#section-displayCapabilities">displayCapabilities</a></li>
+  <li><a href="#section-buttonCapabilities">buttonCapabilities</a></li>
+  <li><a href="#section-softButtonCapabilities">softButtonCapabilities</a></li>
+  <li><a href="#section-presetBankCapabilities">presetBankCapabilities</a></li>
+  <li><a href="#section-hmiZoneCapabilities">hmiZoneCapabilities</a></li>
+  <li><a href="#section-speechCapabilities">speechCapabilities</a></li>
+  <li><a href="#section-prerecordedSpeech">prerecordedSpeech</a></li>
+  <li><a href="#section-vrCapabilities">vrCapabilities</a></li>
+  <li><a href="#section-audioPassThruCapabilities">audioPassThruCapabilities</a></li>
+  <li><a href="#section-pcmStreamCapabilities">pcmStreamCapabilities</a></li>
+  <li><a href="#section-vehicleType">vehicleType</a></li>
+  <li><a href="#section-supportedDiagModes">supportedDiagModes</a></li>
+  <li><a href="#section-hmiCapabilities">hmiCapabilities</a></li>
+  <li><a href="#section-sdlVersion">sdlVersion</a></li>
+  <li><a href="#section-systemSoftwareVersion">systemSoftwareVersion</a></li>
+  <li><a href="#section-iconResumed">iconResumed</a></li>
+</ul>
+
+<h3>Overview</h3>
+
+<p>Response to SDLRegisterAppInterface</p>
+
+<p>@since SDL 1.0</p>
+
+
+<section class="section task-group-section">
+  <h3 id="section-syncMsgVersion">
+      syncMsgVersion
+  </h3>
+  
+  <p>Specifies the negotiated version number of the SmartDeviceLink protocol that is to be supported by the mobile application.</p>
+
+<p>SDLSyncMsgVersion, Optional</p>
+
+<p>@since SDL 1.0</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SDLSyncMsgVersion.html">SDLSyncMsgVersion</a></span> <span class="o">*</span><span class="n">syncMsgVersion</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">syncMsgVersion</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLSyncMsgVersion.html">SDLSyncMsgVersion</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-sdlMsgVersion">
+      sdlMsgVersion
+  </h3>
+  
+  <p>Specifies the negotiated version number of the SmartDeviceLink protocol that is to be supported by the mobile application.</p>
+
+<p>SDLMsgVersion, Optional</p>
+
+<p>@since SDL 1.0</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/SDLMsgVersion.html">SDLMsgVersion</a></span> <span class="o">*</span><span class="n">sdlMsgVersion</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">sdlMsgVersion</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLMsgVersion.html">SDLMsgVersion</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-language">
+      language
+  </h3>
+  
+  <p>The currently active VR+TTS language on the module. See <q>Language</q> for options.</p>
+
+<p>SDLLanguage, Optional</p>
+
+<p>@since SDL 1.0</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDLLanguage.h@T@SDLLanguage">SDLLanguage</a></span> <span class="n">language</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">language</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLLanguage.h@T@SDLLanguage">SDLLanguage</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-hmiDisplayLanguage">
+      hmiDisplayLanguage
+  </h3>
+  
+  <p>The currently active display language on the module. See <q>Language</q> for options.</p>
+
+<p>SDLLanguage, Optional</p>
+
+<p>@since SDL 2.0</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n"><a href="../Type%20Definitions.html#/c:SDLLanguage.h@T@SDLLanguage">SDLLanguage</a></span> <span class="n">hmiDisplayLanguage</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">hmiDisplayLanguage</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLLanguage.h@T@SDLLanguage">SDLLanguage</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-displayCapabilities">
+      displayCapabilities
+  </h3>
+  
+  <p>Contains information about the display&rsquo;s capabilities.</p>
+
+<p>SDLDisplayCapabilities, Optional</p>
+
+<p>@since SDL 1.0</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SDLDisplayCapabilities.html">SDLDisplayCapabilities</a></span> <span class="o">*</span><span class="n">displayCapabilities</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">displayCapabilities</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLDisplayCapabilities.html">SDLDisplayCapabilities</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-buttonCapabilities">
+      buttonCapabilities
+  </h3>
+  
+  <p>Contains information about the head unit button capabilities.</p>
+
+<p>Array of SDLButtonCapabilities, Optional, Array of length 1 - 100</p>
+
+<p>@since SDL 1.0</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/SDLButtonCapabilities.html">SDLButtonCapabilities</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">buttonCapabilities</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">buttonCapabilities</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/SDLButtonCapabilities.html">SDLButtonCapabilities</a></span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-softButtonCapabilities">
+      softButtonCapabilities
+  </h3>
+  
+  <p>Contains information about the head unit soft button capabilities.</p>
+
+<p>Array of SDLSoftButtonCapabilities, Optional, Array of length 1 - 100</p>
+
+<p>@since SDL 2.0</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/SDLSoftButtonCapabilities.html">SDLSoftButtonCapabilities</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">softButtonCapabilities</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">softButtonCapabilities</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/SDLSoftButtonCapabilities.html">SDLSoftButtonCapabilities</a></span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-presetBankCapabilities">
+      presetBankCapabilities
+  </h3>
+  
+  <p>If returned, the platform supports custom on-screen Presets</p>
+
+<p>SDLPresetBankCapabilities, Optional</p>
+
+<p>@since SDL 2.0</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SDLPresetBankCapabilities.html">SDLPresetBankCapabilities</a></span> <span class="o">*</span><span class="n">presetBankCapabilities</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">presetBankCapabilities</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLPresetBankCapabilities.html">SDLPresetBankCapabilities</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-hmiZoneCapabilities">
+      hmiZoneCapabilities
+  </h3>
+  
+  <p>Contains information about the HMI zone capabilities.</p>
+
+<p>Array of SDLHMIZoneCapabilities, Optional, Array of length 1 - 100</p>
+
+<p>@since SDL 1.0</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Type%20Definitions.html#/c:SDLHMIZoneCapabilities.h@T@SDLHMIZoneCapabilities">SDLHMIZoneCapabilities</a></span><span class="o">&gt;</span> <span class="o">*</span><span class="n">hmiZoneCapabilities</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">hmiZoneCapabilities</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Type%20Definitions.html#/c:SDLHMIZoneCapabilities.h@T@SDLHMIZoneCapabilities">SDLHMIZoneCapabilities</a></span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-speechCapabilities">
+      speechCapabilities
+  </h3>
+  
+  <p>Contains information about the text-to-speech capabilities.</p>
+
+<p>Array of SDLSpeechCapabilities, Optional, Array of length 1 - 100</p>
+
+<p>@since SDL 1.0</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Type%20Definitions.html#/c:SDLSpeechCapabilities.h@T@SDLSpeechCapabilities">SDLSpeechCapabilities</a></span><span class="o">&gt;</span> <span class="o">*</span><span class="n">speechCapabilities</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">speechCapabilities</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Type%20Definitions.html#/c:SDLSpeechCapabilities.h@T@SDLSpeechCapabilities">SDLSpeechCapabilities</a></span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-prerecordedSpeech">
+      prerecordedSpeech
+  </h3>
+  
+  <p>Contains a list of prerecorded speech items present on the platform.</p>
+
+<p>Array of SDLPrerecordedSpeech, Optional, Array of length 1 - 100</p>
+
+<p>@since SDL 3.0</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Type%20Definitions.html#/c:SDLPrerecordedSpeech.h@T@SDLPrerecordedSpeech">SDLPrerecordedSpeech</a></span><span class="o">&gt;</span> <span class="o">*</span><span class="n">prerecordedSpeech</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">prerecordedSpeech</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Type%20Definitions.html#/c:SDLPrerecordedSpeech.h@T@SDLPrerecordedSpeech">SDLPrerecordedSpeech</a></span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-vrCapabilities">
+      vrCapabilities
+  </h3>
+  
+  <p>Contains information about the VR capabilities.</p>
+
+<p>Array of SDLVRCapabilities, Optional, Array of length 1 - 100</p>
+
+<p>@since SDL 1.0</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Type%20Definitions.html#/c:SDLVrCapabilities.h@T@SDLVRCapabilities">SDLVRCapabilities</a></span><span class="o">&gt;</span> <span class="o">*</span><span class="n">vrCapabilities</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">vrCapabilities</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Type%20Definitions.html#/c:SDLVrCapabilities.h@T@SDLVRCapabilities">SDLVRCapabilities</a></span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-audioPassThruCapabilities">
+      audioPassThruCapabilities
+  </h3>
+  
+  <p>Describes different audio type configurations for PerformAudioPassThru, e.g. {8kHz,8-bit,PCM}. The audio is recorded in monaural.</p>
+
+<p>Array of SDLAudioPassThruCapabilities, Optional, Array of length 1 - 100</p>
+
+<p>@since SDL 2.0</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/SDLAudioPassThruCapabilities.html">SDLAudioPassThruCapabilities</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">audioPassThruCapabilities</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">audioPassThruCapabilities</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/SDLAudioPassThruCapabilities.html">SDLAudioPassThruCapabilities</a></span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-pcmStreamCapabilities">
+      pcmStreamCapabilities
+  </h3>
+  
+  <p>Describes different audio type configurations for the audio PCM stream service, e.g. {8kHz,8-bit,PCM}</p>
+
+<p>SDLAudioPassThruCapabilities, Optional</p>
+
+<p>@since SDL 4.1</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SDLAudioPassThruCapabilities.html">SDLAudioPassThruCapabilities</a></span> <span class="o">*</span><span class="n">pcmStreamCapabilities</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">pcmStreamCapabilities</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLAudioPassThruCapabilities.html">SDLAudioPassThruCapabilities</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-vehicleType">
+      vehicleType
+  </h3>
+  
+  <p>Specifies the connected vehicle&rsquo;s type.</p>
+
+<p>SDLVehicleType, Optional</p>
+
+<p>@since SDL 2.0</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/SDLVehicleType.html">SDLVehicleType</a></span> <span class="o">*</span><span class="n">vehicleType</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">vehicleType</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLVehicleType.html">SDLVehicleType</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-supportedDiagModes">
+      supportedDiagModes
+  </h3>
+  
+  <p>Specifies the white-list of supported diagnostic modes (0x00-0xFF) capable for DiagnosticMessage requests. If a mode outside this list is requested, it will be rejected.</p>
+
+<p>Array of Integers, Optional, Array of length 1 - 100, Value range: 0 - 255</p>
+
+<p>@since SDL 3.0</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSNumber</span><span class="o">&lt;</span><span class="n"><a href="../Protocols.html#/c:objc(pl)SDLInt">SDLInt</a></span><span class="o">&gt;</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">supportedDiagModes</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">supportedDiagModes</span><span class="p">:</span> <span class="p">[</span><span class="kt">NSNumber</span> <span class="o">&amp;</span> <span class="kt"><a href="../Protocols.html#/c:objc(pl)SDLInt">SDLInt</a></span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-hmiCapabilities">
+      hmiCapabilities
+  </h3>
+  
+  <p>Specifies the HMI capabilities.</p>
+
+<p>SDLHMICapabilities, Optional</p>
+
+<p>@since SDL 3.0</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SDLHMICapabilities.html">SDLHMICapabilities</a></span> <span class="o">*</span><span class="n">hmiCapabilities</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">hmiCapabilities</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLHMICapabilities.html">SDLHMICapabilities</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-sdlVersion">
+      sdlVersion
+  </h3>
+  
+  <p>The version of SDL Core running on the connected head unit</p>
+
+<p>String, Optional, Max length: 100</p>
+
+<p>@since SDL 3.0</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">sdlVersion</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">sdlVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-systemSoftwareVersion">
+      systemSoftwareVersion
+  </h3>
+  
+  <p>The software version of the system that implements the SmartDeviceLink core.</p>
+
+<p>String, Optional, Max length: 100</p>
+
+<p>@since SDL 3.0</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n">NSString</span> <span class="o">*</span><span class="n">systemSoftwareVersion</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">systemSoftwareVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-iconResumed">
+      iconResumed
+  </h3>
+  
+  <p>Existence of apps icon at system. If true, apps icon was resumed at system. If false, apps icon is not resumed at system.</p>
+
+<p>Bool, Optional</p>
+
+<p>@since SDL 5.0</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n">NSNumber</span><span class="o">&lt;</span><span class="n"><a href="../Protocols.html#/c:objc(pl)SDLBool">SDLBool</a></span><span class="o">&gt;</span> <span class="o">*</span><span class="n">iconResumed</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">iconResumed</span><span class="p">:</span> <span class="p">(</span><span class="kt">NSNumber</span> <span class="o">&amp;</span> <span class="kt"><a href="../Protocols.html#/c:objc(pl)SDLBool">SDLBool</a></span><span class="p">)?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+</section>

@@ -1,0 +1,43 @@
+<h1>SDLOnAppInterfaceUnregistered Class Reference</h1>
+
+<h3>Section Contents</h3>
+
+<ul>
+  <li><a href="#section-reason">reason</a></li>
+</ul>
+
+<h3>Overview</h3>
+
+<p>Notifies an application that its interface registration has been terminated. This means that all SDL resources associated with the application are discarded, including the Command Menu, Choice Sets, button subscriptions, etc.</p>
+
+<p>For more information about SDL resources related to an interface registration, see <i>SDLRegisterAppInterface</i>.</p>
+
+<p>@since SDL 1.0</p>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    SDLRegisterAppInterface
+
+</div>
+
+
+<section class="section task-group-section">
+  <h3 id="section-reason">
+      reason
+  </h3>
+  
+  <p>The reason application&rsquo;s interface was terminated</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n"><a href="../Type%20Definitions.html#/c:SDLAppInterfaceUnregisteredReason.h@T@SDLAppInterfaceUnregisteredReason">SDLAppInterfaceUnregisteredReason</a></span> <span class="n">_Nonnull</span> <span class="n">reason</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">reason</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLAppInterfaceUnregisteredReason.h@T@SDLAppInterfaceUnregisteredReason">SDLAppInterfaceUnregisteredReason</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+</section>

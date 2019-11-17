@@ -1,0 +1,64 @@
+<h1>SDLUnsubscribeButton Class Reference</h1>
+
+<h3>Section Contents</h3>
+
+<ul>
+  <li><a href="#section--initWithButtonName:">-initWithButtonName:</a></li>
+  <li><a href="#section-buttonName">buttonName</a></li>
+</ul>
+
+<h3>Overview</h3>
+
+<p>Deletes a subscription to button notifications for the specified button. For
+more information about button subscriptions, see SDLSubscribeButton
+<p>
+Application can unsubscribe from a button that is currently being pressed
+(i.e. has not yet been released), but app will not get button event
+<p>
+<b>HMILevel needs to be FULL, LIMITED or BACKGROUND</b>
+<p></p>
+
+<p>@since SmartDeviceLink 1.0<br/>
+See SDLSubscribeButton</p>
+
+
+<section class="section task-group-section">
+  <h3 id="section--initWithButtonName:">
+      -initWithButtonName:
+  </h3>
+  
+  <p>Undocumented</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithButtonName</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:SDLButtonName.h@T@SDLButtonName">SDLButtonName</a></span><span class="p">)</span><span class="nv">buttonName</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">buttonName</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLButtonName.h@T@SDLButtonName">SDLButtonName</a></span><span class="p">)</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-buttonName">
+      buttonName
+  </h3>
+  
+  <p>A name of the button to unsubscribe from
+@discussion An Enumeration value, see <i>
+        SDLButtonName</i></p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDLButtonName.h@T@SDLButtonName">SDLButtonName</a></span> <span class="n">_Nonnull</span> <span class="n">buttonName</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">buttonName</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLButtonName.h@T@SDLButtonName">SDLButtonName</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+</section>

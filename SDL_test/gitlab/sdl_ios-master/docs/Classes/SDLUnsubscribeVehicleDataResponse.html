@@ -1,0 +1,710 @@
+<h1>SDLUnsubscribeVehicleDataResponse Class Reference</h1>
+
+<h3>Section Contents</h3>
+
+<ul>
+  <li><a href="#section-gps">gps</a></li>
+  <li><a href="#section-speed">speed</a></li>
+  <li><a href="#section-rpm">rpm</a></li>
+  <li><a href="#section-fuelLevel">fuelLevel</a></li>
+  <li><a href="#section-fuelLevel_State">fuelLevel_State</a></li>
+  <li><a href="#section-fuelRange">fuelRange</a></li>
+  <li><a href="#section-instantFuelConsumption">instantFuelConsumption</a></li>
+  <li><a href="#section-externalTemperature">externalTemperature</a></li>
+  <li><a href="#section-prndl">prndl</a></li>
+  <li><a href="#section-tirePressure">tirePressure</a></li>
+  <li><a href="#section-odometer">odometer</a></li>
+  <li><a href="#section-beltStatus">beltStatus</a></li>
+  <li><a href="#section-bodyInformation">bodyInformation</a></li>
+  <li><a href="#section-deviceStatus">deviceStatus</a></li>
+  <li><a href="#section-driverBraking">driverBraking</a></li>
+  <li><a href="#section-wiperStatus">wiperStatus</a></li>
+  <li><a href="#section-headLampStatus">headLampStatus</a></li>
+  <li><a href="#section-engineOilLife">engineOilLife</a></li>
+  <li><a href="#section-engineTorque">engineTorque</a></li>
+  <li><a href="#section-accPedalPosition">accPedalPosition</a></li>
+  <li><a href="#section-steeringWheelAngle">steeringWheelAngle</a></li>
+  <li><a href="#section-eCallInfo">eCallInfo</a></li>
+  <li><a href="#section-airbagStatus">airbagStatus</a></li>
+  <li><a href="#section-emergencyEvent">emergencyEvent</a></li>
+  <li><a href="#section-clusterModes">clusterModes</a></li>
+  <li><a href="#section-myKey">myKey</a></li>
+  <li><a href="#section-electronicParkBrakeStatus">electronicParkBrakeStatus</a></li>
+  <li><a href="#section-turnSignal">turnSignal</a></li>
+  <li><a href="#section-cloudAppVehicleID">cloudAppVehicleID</a></li>
+  <li><a href="#section--setOEMCustomVehicleData:withVehicleDataState:">-setOEMCustomVehicleData:withVehicleDataState:</a></li>
+  <li><a href="#section--getOEMCustomVehicleData:">-getOEMCustomVehicleData:</a></li>
+</ul>
+
+<h3>Overview</h3>
+
+<p>Response to UnsubscribeVehicleData</p>
+
+<p>since SmartDeviceLink 2.0</p>
+
+
+<section class="section task-group-section">
+  <h3 id="section-gps">
+      gps
+  </h3>
+  
+  <p>The result of requesting to unsubscribe to the GPSData.</p>
+
+<p>Optional</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span> <span class="o">*</span><span class="n">gps</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">gps</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-speed">
+      speed
+  </h3>
+  
+  <p>The result of requesting to unsubscribe to the vehicle speed in kilometers per hour.</p>
+
+<p>Optional</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span> <span class="o">*</span><span class="n">speed</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">speed</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-rpm">
+      rpm
+  </h3>
+  
+  <p>The result of requesting to unsubscribe to the number of revolutions per minute of the engine.</p>
+
+<p>Optional</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span> <span class="o">*</span><span class="n">rpm</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">rpm</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-fuelLevel">
+      fuelLevel
+  </h3>
+  
+  <p>The result of requesting to unsubscribe to the fuel level in the tank (percentage)</p>
+
+<p>Optional</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span> <span class="o">*</span><span class="n">fuelLevel</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">fuelLevel</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-fuelLevel_State">
+      fuelLevel_State
+  </h3>
+  
+  <p>The result of requesting to unsubscribe to the fuel level state.</p>
+
+<p>Optional</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span> <span class="o">*</span><span class="n">fuelLevel_State</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">fuelLevel_State</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-fuelRange">
+      fuelRange
+  </h3>
+  
+  <p>The result of requesting to unsubscribe to the fuel range.</p>
+
+<p>Optional</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span> <span class="o">*</span><span class="n">fuelRange</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">fuelRange</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-instantFuelConsumption">
+      instantFuelConsumption
+  </h3>
+  
+  <p>The result of requesting to unsubscribe to the instantaneous fuel consumption in microlitres.</p>
+
+<p>Optional</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span> <span class="o">*</span><span class="n">instantFuelConsumption</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">instantFuelConsumption</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-externalTemperature">
+      externalTemperature
+  </h3>
+  
+  <p>The result of requesting to unsubscribe to the external temperature in degrees celsius.</p>
+
+<p>Optional</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span> <span class="o">*</span><span class="n">externalTemperature</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">externalTemperature</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-prndl">
+      prndl
+  </h3>
+  
+  <p>The result of requesting to unsubscribe to the PRNDL status.</p>
+
+<p>Optional</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span> <span class="o">*</span><span class="n">prndl</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">prndl</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-tirePressure">
+      tirePressure
+  </h3>
+  
+  <p>The result of requesting to unsubscribe to the tireStatus.</p>
+
+<p>Optional</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span> <span class="o">*</span><span class="n">tirePressure</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">tirePressure</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-odometer">
+      odometer
+  </h3>
+  
+  <p>The result of requesting to unsubscribe to the odometer in km.</p>
+
+<p>Optional</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span> <span class="o">*</span><span class="n">odometer</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">odometer</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-beltStatus">
+      beltStatus
+  </h3>
+  
+  <p>The result of requesting to unsubscribe to the status of the seat belts.</p>
+
+<p>Optional</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span> <span class="o">*</span><span class="n">beltStatus</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">beltStatus</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-bodyInformation">
+      bodyInformation
+  </h3>
+  
+  <p>The result of requesting to unsubscribe to the body information including power modes.</p>
+
+<p>Optional</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span> <span class="o">*</span><span class="n">bodyInformation</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">bodyInformation</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-deviceStatus">
+      deviceStatus
+  </h3>
+  
+  <p>The result of requesting to unsubscribe to the device status including signal and battery strength.</p>
+
+<p>Optional</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span> <span class="o">*</span><span class="n">deviceStatus</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">deviceStatus</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-driverBraking">
+      driverBraking
+  </h3>
+  
+  <p>The result of requesting to unsubscribe to the status of the brake pedal.</p>
+
+<p>Optional</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span> <span class="o">*</span><span class="n">driverBraking</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">driverBraking</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-wiperStatus">
+      wiperStatus
+  </h3>
+  
+  <p>The result of requesting to unsubscribe to the status of the wipers.</p>
+
+<p>Optional</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span> <span class="o">*</span><span class="n">wiperStatus</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">wiperStatus</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-headLampStatus">
+      headLampStatus
+  </h3>
+  
+  <p>The result of requesting to unsubscribe to the status of the head lamps.</p>
+
+<p>Optional</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span> <span class="o">*</span><span class="n">headLampStatus</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">headLampStatus</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-engineOilLife">
+      engineOilLife
+  </h3>
+  
+  <p>The result of requesting to unsubscribe to the estimated percentage of remaining oil life of the engine.</p>
+
+<p>Optional</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span> <span class="o">*</span><span class="n">engineOilLife</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">engineOilLife</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-engineTorque">
+      engineTorque
+  </h3>
+  
+  <p>The result of requesting to unsubscribe to the torque value for engine (in Nm) on non-diesel variants.</p>
+
+<p>Optional</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span> <span class="o">*</span><span class="n">engineTorque</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">engineTorque</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-accPedalPosition">
+      accPedalPosition
+  </h3>
+  
+  <p>The result of requesting to unsubscribe to the accelerator pedal position (percentage depressed)</p>
+
+<p>Optional</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span> <span class="o">*</span><span class="n">accPedalPosition</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">accPedalPosition</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-steeringWheelAngle">
+      steeringWheelAngle
+  </h3>
+  
+  <p>The result of requesting to unsubscribe to the current angle of the steering wheel (in deg)</p>
+
+<p>Optional</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span> <span class="o">*</span><span class="n">steeringWheelAngle</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">steeringWheelAngle</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-eCallInfo">
+      eCallInfo
+  </h3>
+  
+  <p>The result of requesting to unsubscribe to the emergency call info</p>
+
+<p>Optional</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span> <span class="o">*</span><span class="n">eCallInfo</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">eCallInfo</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-airbagStatus">
+      airbagStatus
+  </h3>
+  
+  <p>The result of requesting to unsubscribe to the airbag status</p>
+
+<p>Optional</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span> <span class="o">*</span><span class="n">airbagStatus</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">airbagStatus</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-emergencyEvent">
+      emergencyEvent
+  </h3>
+  
+  <p>The result of requesting to unsubscribe to the emergency event</p>
+
+<p>Optional</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span> <span class="o">*</span><span class="n">emergencyEvent</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">emergencyEvent</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-clusterModes">
+      clusterModes
+  </h3>
+  
+  <p>The result of requesting to unsubscribe to the cluster modes</p>
+
+<p>Optional</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span> <span class="o">*</span><span class="n">clusterModes</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">clusterModes</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-myKey">
+      myKey
+  </h3>
+  
+  <p>The result of requesting to unsubscribe to the myKey status</p>
+
+<p>Optional</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span> <span class="o">*</span><span class="n">myKey</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">myKey</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-electronicParkBrakeStatus">
+      electronicParkBrakeStatus
+  </h3>
+  
+  <p>The result of requesting to unsubscribe to the electronic parking brake status</p>
+
+<p>Optional</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span> <span class="o">*</span><span class="n">electronicParkBrakeStatus</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">electronicParkBrakeStatus</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-turnSignal">
+      turnSignal
+  </h3>
+  
+  <p>The result of requesting to unsubscribe to the turn signal</p>
+
+<p>Optional</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span> <span class="o">*</span><span class="n">turnSignal</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">turnSignal</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-cloudAppVehicleID">
+      cloudAppVehicleID
+  </h3>
+  
+  <p>The result of requesting to unsubscribe to the cloud app vehicle id</p>
+
+<p>Optional</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span> <span class="o">*</span><span class="n">cloudAppVehicleID</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">cloudAppVehicleID</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section--setOEMCustomVehicleData:withVehicleDataState:">
+      -setOEMCustomVehicleData:withVehicleDataState:
+  </h3>
+  
+  <p>Sets the OEM custom vehicle data state for any given OEM custom vehicle data name.</p>
+
+<p>Added SmartDeviceLink 6.0</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setOEMCustomVehicleData</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">vehicleDataName</span>
+           <span class="nf">withVehicleDataState</span><span class="p">:</span>
+               <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">vehicleDataState</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setOEMCustomVehicleData</span><span class="p">(</span><span class="n">name</span> <span class="nv">vehicleDataName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">state</span> <span class="nv">vehicleDataState</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span><span class="p">)</span></code></pre>
+
+  
+  
+  <h4>Parameters</h4>
+  <dl>
+      <dt>vehicleDataName</dt>
+      <dd><p>The name of the OEM custom vehicle data item.</p></dd>
+      <dt>vehicleDataState</dt>
+      <dd><p>SDLVehicleDataResult object containing custom data type and result code information.</p></dd>
+  </dl>
+  
+  <h3 id="section--getOEMCustomVehicleData:">
+      -getOEMCustomVehicleData:
+  </h3>
+  
+  <p>Gets the OEM custom vehicle data state for any given OEM custom vehicle data name.</p>
+
+<p>Added SmartDeviceLink 6.0</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">getOEMCustomVehicleData</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">vehicleDataName</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getOEMCustomVehicleData</span><span class="p">(</span><span class="n">_</span> <span class="nv">vehicleDataName</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/SDLVehicleDataResult.html">SDLVehicleDataResult</a></span><span class="p">?</span></code></pre>
+
+  
+  
+  <h4>Parameters</h4>
+  <dl>
+      <dt>vehicleDataName</dt>
+      <dd><p>The name of the OEM custom vehicle data item.</p></dd>
+  </dl>
+  <div>
+    <h4>Return Value</h4>
+    <p>SDLVehicleDataResult object containing custom data type and result code information.</p>
+  </div>
+  
+</section>

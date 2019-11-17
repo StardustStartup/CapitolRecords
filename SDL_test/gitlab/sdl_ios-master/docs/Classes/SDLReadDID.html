@@ -1,0 +1,90 @@
+<h1>SDLReadDID Class Reference</h1>
+
+<h3>Section Contents</h3>
+
+<ul>
+  <li><a href="#section--initWithECUName:didLocation:">-initWithECUName:didLocation:</a></li>
+  <li><a href="#section-ecuName">ecuName</a></li>
+  <li><a href="#section-didLocation">didLocation</a></li>
+</ul>
+
+<h3>Overview</h3>
+
+<p>Non periodic vehicle data read request. This is an RPC to get diagnostics
+ data from certain vehicle modules. DIDs of a certain module might differ from
+ vehicle type to vehicle type
+ <p>
+ Function Group: ProprietaryData
+ <p>
+ <b>HMILevel needs to be FULL, LIMITED or BACKGROUND</b>
+ <p></p>
+
+<p>Since SmartDeviceLink 2.0</p>
+
+
+<section class="section task-group-section">
+  <h3 id="section--initWithECUName:didLocation:">
+      -initWithECUName:didLocation:
+  </h3>
+  
+  <p>Undocumented</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithECUName</span><span class="p">:(</span><span class="n">UInt16</span><span class="p">)</span><span class="nv">ecuNumber</span> <span class="nf">didLocation</span><span class="p">:(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSNumber</span><span class="o">&lt;</span><span class="n"><a href="../Protocols.html#/c:objc(pl)SDLUInt">SDLUInt</a></span><span class="o">&gt;</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">didLocation</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="n"><a href="../Classes/SDLReadDID.html#/c:objc(cs)SDLReadDID(py)ecuName">ecuName</a></span> <span class="nv">ecuNumber</span><span class="p">:</span> <span class="kt">UInt16</span><span class="p">,</span> <span class="nv">didLocation</span><span class="p">:</span> <span class="p">[</span><span class="kt">NSNumber</span> <span class="o">&amp;</span> <span class="kt"><a href="../Protocols.html#/c:objc(pl)SDLUInt">SDLUInt</a></span><span class="p">])</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-ecuName">
+      ecuName
+  </h3>
+  
+  <p>An ID of the vehicle module
+           <br/><b>Notes: </b>Minvalue:0; Maxvalue:65535</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSNumber</span><span class="o">&lt;</span><span class="n"><a href="../Protocols.html#/c:objc(pl)SDLInt">SDLInt</a></span><span class="o">&gt;</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">ecuName</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">ecuName</span><span class="p">:</span> <span class="kt">NSNumber</span> <span class="o">&amp;</span> <span class="kt"><a href="../Protocols.html#/c:objc(pl)SDLInt">SDLInt</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-didLocation">
+      didLocation
+  </h3>
+  
+  <p>Raw data from vehicle data DID location(s)
+           <br/>a Vector<Integer> value representing raw data from vehicle
+           data DID location(s)
+           <p>
+           <b>Notes: </b>
+           <ul>
+           <li>Minvalue:0; Maxvalue:65535</li>
+           <li>ArrayMin:0; ArrayMax:1000</li>
+           </ul></p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSNumber</span><span class="o">&lt;</span><span class="n"><a href="../Protocols.html#/c:objc(pl)SDLInt">SDLInt</a></span><span class="o">&gt;</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">didLocation</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">didLocation</span><span class="p">:</span> <span class="p">[</span><span class="kt">NSNumber</span> <span class="o">&amp;</span> <span class="kt"><a href="../Protocols.html#/c:objc(pl)SDLInt">SDLInt</a></span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+</section>

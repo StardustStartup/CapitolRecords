@@ -1,0 +1,195 @@
+<h1>SDLGetInteriorVehicleData Class Reference</h1>
+
+<h3>Section Contents</h3>
+
+<ul>
+  <li><a href="#section--initWithModuleType:moduleId:">-initWithModuleType:moduleId:</a></li>
+  <li><a href="#section--initAndSubscribeToModuleType:moduleId:">-initAndSubscribeToModuleType:moduleId:</a></li>
+  <li><a href="#section--initAndUnsubscribeToModuleType:moduleId:">-initAndUnsubscribeToModuleType:moduleId:</a></li>
+  <li><a href="#section--initWithModuleType:">-initWithModuleType:</a></li>
+  <li><a href="#section--initAndSubscribeToModuleType:">-initAndSubscribeToModuleType:</a></li>
+  <li><a href="#section--initAndUnsubscribeToModuleType:">-initAndUnsubscribeToModuleType:</a></li>
+  <li><a href="#section-moduleType">moduleType</a></li>
+  <li><a href="#section-moduleId">moduleId</a></li>
+  <li><a href="#section-subscribe">subscribe</a></li>
+</ul>
+
+<h3>Overview</h3>
+
+<p>Reads the current status value of specified remote control module (type).
+When subscribe is true, subscribes for specific remote control module data items.
+When subscribe is false, unsubscribes for specific remote control module data items.
+Once subscribed, the application will be notified by the onInteriorVehicleData RPC notification
+whenever new data is available for the module.</p>
+
+
+<section class="section task-group-section">
+  <h3 id="section--initWithModuleType:moduleId:">
+      -initWithModuleType:moduleId:
+  </h3>
+  
+  <p>Undocumented</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithModuleType</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:SDLModuleType.h@T@SDLModuleType">SDLModuleType</a></span><span class="p">)</span><span class="nv">moduleType</span> <span class="nf">moduleId</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">moduleId</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">moduleType</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLModuleType.h@T@SDLModuleType">SDLModuleType</a></span><span class="p">,</span> <span class="nv">moduleId</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+  
+  
+  
+  <h3 id="section--initAndSubscribeToModuleType:moduleId:">
+      -initAndSubscribeToModuleType:moduleId:
+  </h3>
+  
+  <p>Undocumented</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">initAndSubscribeToModuleType</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:SDLModuleType.h@T@SDLModuleType">SDLModuleType</a></span><span class="p">)</span><span class="nv">moduleType</span> <span class="nf">moduleId</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">moduleId</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="n">andSubscribeToModuleType</span> <span class="nv">moduleType</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLModuleType.h@T@SDLModuleType">SDLModuleType</a></span><span class="p">,</span> <span class="nv">moduleId</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+  
+  
+  
+  <h3 id="section--initAndUnsubscribeToModuleType:moduleId:">
+      -initAndUnsubscribeToModuleType:moduleId:
+  </h3>
+  
+  <p>Undocumented</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">initAndUnsubscribeToModuleType</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:SDLModuleType.h@T@SDLModuleType">SDLModuleType</a></span><span class="p">)</span><span class="nv">moduleType</span> <span class="nf">moduleId</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">moduleId</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="n">andUnsubscribeToModuleType</span> <span class="nv">moduleType</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLModuleType.h@T@SDLModuleType">SDLModuleType</a></span><span class="p">,</span> <span class="nv">moduleId</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+  
+  
+  
+  <h3 id="section--initWithModuleType:">
+      -initWithModuleType:
+  </h3>
+  
+  <p>Undocumented</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithModuleType</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:SDLModuleType.h@T@SDLModuleType">SDLModuleType</a></span><span class="p">)</span><span class="nv">moduleType</span> <span class="n">__deprecated_msg</span><span class="p">(</span><span class="s">"Use initWithModuleType:moduleId: instead"</span><span class="p">);</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">moduleType</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLModuleType.h@T@SDLModuleType">SDLModuleType</a></span><span class="p">)</span></code></pre>
+
+  
+  
+  
+  <h3 id="section--initAndSubscribeToModuleType:">
+      -initAndSubscribeToModuleType:
+  </h3>
+  
+  <p>Undocumented</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">initAndSubscribeToModuleType</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:SDLModuleType.h@T@SDLModuleType">SDLModuleType</a></span><span class="p">)</span><span class="nv">moduleType</span> <span class="n">__deprecated_msg</span><span class="p">(</span><span class="s">"Use initAndSubscribeToModuleType:moduleId: instead"</span><span class="p">);</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="n">andSubscribeToModuleType</span> <span class="nv">moduleType</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLModuleType.h@T@SDLModuleType">SDLModuleType</a></span><span class="p">)</span></code></pre>
+
+  
+  
+  
+  <h3 id="section--initAndUnsubscribeToModuleType:">
+      -initAndUnsubscribeToModuleType:
+  </h3>
+  
+  <p>Undocumented</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">initAndUnsubscribeToModuleType</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:SDLModuleType.h@T@SDLModuleType">SDLModuleType</a></span><span class="p">)</span><span class="nv">moduleType</span> <span class="n">__deprecated_msg</span><span class="p">(</span><span class="s">"Use initAndUnsubscribeToModuleType:moduleId:"</span><span class="p">);</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="n">andUnsubscribeToModuleType</span> <span class="nv">moduleType</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLModuleType.h@T@SDLModuleType">SDLModuleType</a></span><span class="p">)</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-moduleType">
+      moduleType
+  </h3>
+  
+  <p>The type of a RC module to retrieve module data from the vehicle.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDLModuleType.h@T@SDLModuleType">SDLModuleType</a></span> <span class="n">_Nonnull</span> <span class="n">moduleType</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">moduleType</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLModuleType.h@T@SDLModuleType">SDLModuleType</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-moduleId">
+      moduleId
+  </h3>
+  
+  <p>Id of a module, published by System Capability.</p>
+
+<p>Optional</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">moduleId</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">moduleId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-subscribe">
+      subscribe
+  </h3>
+  
+  <p>If subscribe is true, the head unit will register OnInteriorVehicleData notifications for the requested module (moduleId and moduleType).
+ If subscribe is false, the head unit will unregister OnInteriorVehicleData notifications for the requested module (moduleId and moduleType).
+ If subscribe is not included, the subscription status of the app for the requested module (moduleId and moduleType) will remain unchanged.</p>
+
+<p>optional, Boolean, default Value = false</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSNumber</span><span class="o">&lt;</span><span class="n"><a href="../Protocols.html#/c:objc(pl)SDLBool">SDLBool</a></span><span class="o">&gt;</span> <span class="o">*</span><span class="n">subscribe</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">subscribe</span><span class="p">:</span> <span class="p">(</span><span class="kt">NSNumber</span> <span class="o">&amp;</span> <span class="kt"><a href="../Protocols.html#/c:objc(pl)SDLBool">SDLBool</a></span><span class="p">)?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+</section>

@@ -1,0 +1,108 @@
+<h1>SDLOnButtonEvent Class Reference</h1>
+
+<h3>Section Contents</h3>
+
+<ul>
+  <li><a href="#section-buttonName">buttonName</a></li>
+  <li><a href="#section-buttonEventMode">buttonEventMode</a></li>
+  <li><a href="#section-customButtonID">customButtonID</a></li>
+</ul>
+
+<h3>Overview</h3>
+
+<p>Notifies application that user has depressed or released a button to which
+the application has subscribed.</p>
+
+<p>Further information about button events and button-presses can be found at SDLSubscribeButton.</p>
+
+<p>HMI Status Requirements:</p>
+
+<p>HMILevel:</p>
+
+<ul>
+<li><p>The application will receive <i>SDLOnButtonEvent</i> notifications for all subscribed buttons when HMILevel is FULL.</p></li>
+<li><p>The application will receive <i>SDLOnButtonEvent</i> notifications for subscribed media buttons when HMILevel is LIMITED.</p></li>
+<li><p>Media buttons include SEEKLEFT, SEEKRIGHT, TUNEUP, TUNEDOWN, and PRESET_0-PRESET_9.</p></li>
+<li><p>The application will not receive <i>SDLOnButtonEvent</i> notification when HMILevel is BACKGROUND.</p></li>
+</ul>
+
+<p>AudioStreamingState:</p>
+
+<ul>
+<li>Any</li>
+</ul>
+
+<p>SystemContext:</p>
+<li><p>MAIN, VR. In MENU, only PRESET buttons.</p></li>
+<li><p>In VR, pressing any subscribable button will cancel VR.</p></li>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <p>SDLSubscribeButton</p>
+
+</div>
+
+<p>@since SDL 1.0</p>
+
+
+<section class="section task-group-section">
+  <h3 id="section-buttonName">
+      buttonName
+  </h3>
+  
+  <p>The name of the button</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDLButtonName.h@T@SDLButtonName">SDLButtonName</a></span> <span class="n">_Nonnull</span> <span class="n">buttonName</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">buttonName</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLButtonName.h@T@SDLButtonName">SDLButtonName</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-buttonEventMode">
+      buttonEventMode
+  </h3>
+  
+  <p>Indicates whether this is an UP or DOWN event</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n"><a href="../Type%20Definitions.html#/c:SDLButtonEventMode.h@T@SDLButtonEventMode">SDLButtonEventMode</a></span> <span class="n">_Nonnull</span> <span class="n">buttonEventMode</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">buttonEventMode</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLButtonEventMode.h@T@SDLButtonEventMode">SDLButtonEventMode</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-customButtonID">
+      customButtonID
+  </h3>
+  
+  <p>If ButtonName is <q>CUSTOM_BUTTON</q>, this references the integer ID passed by a custom button. (e.g. softButton ID)</p>
+
+<p>@since SDL 2.0</p>
+
+<p>Optional, Integer, 0 - 65536</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n">NSNumber</span><span class="o">&lt;</span><span class="n"><a href="../Protocols.html#/c:objc(pl)SDLInt">SDLInt</a></span><span class="o">&gt;</span> <span class="o">*</span><span class="n">customButtonID</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">customButtonID</span><span class="p">:</span> <span class="p">(</span><span class="kt">NSNumber</span> <span class="o">&amp;</span> <span class="kt"><a href="../Protocols.html#/c:objc(pl)SDLInt">SDLInt</a></span><span class="p">)?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+</section>

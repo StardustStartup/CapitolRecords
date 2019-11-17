@@ -1,0 +1,590 @@
+<h1>SDLStreamingMediaManager Class Reference</h1>
+
+<h3>Section Contents</h3>
+
+<ul>
+  <li><a href="#section-touchManager">touchManager</a></li>
+  <li><a href="#section-audioManager">audioManager</a></li>
+  <li><a href="#section-rootViewController">rootViewController</a></li>
+  <li><a href="#section-focusableItemManager">focusableItemManager</a></li>
+  <li><a href="#section-streamingSupported">streamingSupported</a></li>
+  <li><a href="#section-videoConnected">videoConnected</a></li>
+  <li><a href="#section-videoEncrypted">videoEncrypted</a></li>
+  <li><a href="#section-audioConnected">audioConnected</a></li>
+  <li><a href="#section-audioEncrypted">audioEncrypted</a></li>
+  <li><a href="#section-videoStreamingPaused">videoStreamingPaused</a></li>
+  <li><a href="#section-screenSize">screenSize</a></li>
+  <li><a href="#section-videoFormat">videoFormat</a></li>
+  <li><a href="#section-supportedFormats">supportedFormats</a></li>
+  <li><a href="#section-pixelBufferPool">pixelBufferPool</a></li>
+  <li><a href="#section-requestedEncryptionType">requestedEncryptionType</a></li>
+  <li><a href="#section-showVideoBackgroundDisplay">showVideoBackgroundDisplay</a></li>
+  <li><a href="#section--init">-init</a></li>
+  <li><a href="#section--initWithConnectionManager:configuration:">-initWithConnectionManager:configuration:</a></li>
+  <li><a href="#section--startWithProtocol:">-startWithProtocol:</a></li>
+  <li><a href="#section--startAudioWithProtocol:">-startAudioWithProtocol:</a></li>
+  <li><a href="#section--startVideoWithProtocol:">-startVideoWithProtocol:</a></li>
+  <li><a href="#section--stop">-stop</a></li>
+  <li><a href="#section--stopAudio">-stopAudio</a></li>
+  <li><a href="#section--stopVideo">-stopVideo</a></li>
+  <li><a href="#section--sendVideoData:">-sendVideoData:</a></li>
+  <li><a href="#section--sendVideoData:presentationTimestamp:">-sendVideoData:presentationTimestamp:</a></li>
+  <li><a href="#section--sendAudioData:">-sendAudioData:</a></li>
+</ul>
+
+<h3>Overview</h3>
+
+<p>Undocumented</p>
+
+
+<section class="section task-group-section">
+  <h3 id="section-touchManager">
+      touchManager
+  </h3>
+  
+  <p>Touch Manager responsible for providing touch event notifications.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Classes/SDLTouchManager.html">SDLTouchManager</a></span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">touchManager</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">touchManager</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLTouchManager.html">SDLTouchManager</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-audioManager">
+      audioManager
+  </h3>
+  
+  <p>Audio Manager responsible for managing streaming audio.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SDLAudioStreamManager.html">SDLAudioStreamManager</a></span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">audioManager</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">audioManager</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLAudioStreamManager.html">SDLAudioStreamManager</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-rootViewController">
+      rootViewController
+  </h3>
+  
+  <p>This property is used for SDLCarWindow, the ability to stream any view controller. To start, you must set an initial view controller on <code><a href="../Classes/SDLStreamingMediaConfiguration.html">SDLStreamingMediaConfiguration</a></code> <code>rootViewController</code>. After streaming begins, you can replace that view controller with a new root by placing the new view controller into this property.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n">UIViewController</span> <span class="o">*</span><span class="n">rootViewController</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">rootViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-focusableItemManager">
+      focusableItemManager
+  </h3>
+  
+  <p>A haptic interface that can be updated to reparse views within the window you&rsquo;ve provided. Send a <code><a href="../Constants.html#/c:@SDLDidUpdateProjectionView">SDLDidUpdateProjectionView</a></code> notification or call the <code>updateInterfaceLayout</code> method to reparse. The <q>output</q> of this haptic interface occurs in the <code><a href="../Classes/SDLStreamingMediaManager.html#/c:objc(cs)SDLStreamingMediaManager(py)touchManager">touchManager</a></code> property where it will call the delegate.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n">SDLFocusableItemLocatorType</span><span class="o">&gt;</span>
+    <span class="n">focusableItemManager</span><span class="p">;</span></code></pre>
+
+  
+  
+  
+  
+  <h3 id="section-streamingSupported">
+      streamingSupported
+  </h3>
+  
+  <p>Whether or not video streaming is supported</p>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    SDLRegisterAppInterface SDLDisplayCapabilities
+
+</div>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">getter</span><span class="o">=</span><span class="n">isStreamingSupported</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">BOOL</span> <span class="n">streamingSupported</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isStreamingSupported</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-videoConnected">
+      videoConnected
+  </h3>
+  
+  <p>Whether or not the video session is connected.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">getter</span><span class="o">=</span><span class="n">isVideoConnected</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">BOOL</span> <span class="n">videoConnected</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isVideoConnected</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-videoEncrypted">
+      videoEncrypted
+  </h3>
+  
+  <p>Whether or not the video session is encrypted. This may be different than the requestedEncryptionType.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">getter</span><span class="o">=</span><span class="n">isVideoEncrypted</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">BOOL</span> <span class="n">videoEncrypted</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isVideoEncrypted</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-audioConnected">
+      audioConnected
+  </h3>
+  
+  <p>Whether or not the audio session is connected.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">getter</span><span class="o">=</span><span class="n">isAudioConnected</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">BOOL</span> <span class="n">audioConnected</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isAudioConnected</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-audioEncrypted">
+      audioEncrypted
+  </h3>
+  
+  <p>Whether or not the audio session is encrypted. This may be different than the requestedEncryptionType.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">getter</span><span class="o">=</span><span class="n">isAudioEncrypted</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">BOOL</span> <span class="n">audioEncrypted</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isAudioEncrypted</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-videoStreamingPaused">
+      videoStreamingPaused
+  </h3>
+  
+  <p>Whether or not the video stream is paused due to either the application being backgrounded, the HMI state being either NONE or BACKGROUND, or the video stream not being ready.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">getter</span><span class="o">=</span><span class="n">isVideoStreamingPaused</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">BOOL</span> <span class="n">videoStreamingPaused</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isVideoStreamingPaused</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-screenSize">
+      screenSize
+  </h3>
+  
+  <p>The current screen resolution of the connected display in pixels.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">CGSize</span> <span class="n">screenSize</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">screenSize</span><span class="p">:</span> <span class="kt">CGSize</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-videoFormat">
+      videoFormat
+  </h3>
+  
+  <p>This is the agreed upon format of video encoder that is in use, or nil if not currently connected.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SDLVideoStreamingFormat.html">SDLVideoStreamingFormat</a></span> <span class="o">*</span><span class="n">videoFormat</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">videoFormat</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLVideoStreamingFormat.html">SDLVideoStreamingFormat</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-supportedFormats">
+      supportedFormats
+  </h3>
+  
+  <p>A list of all supported video formats by this manager</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/SDLVideoStreamingFormat.html">SDLVideoStreamingFormat</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">supportedFormats</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">supportedFormats</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/SDLVideoStreamingFormat.html">SDLVideoStreamingFormat</a></span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-pixelBufferPool">
+      pixelBufferPool
+  </h3>
+  
+  <p>The pixel buffer pool reference returned back from an active VTCompressionSessionRef encoder.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    This will only return a valid pixel buffer pool after the encoder has been initialized (when the video     session has started).
+@discussion Clients may call this once and retain the resulting pool, this call is cheap enough that it&rsquo;s OK to call it once per frame.
+
+</div>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n">CVPixelBufferPoolRef</span> <span class="n">pixelBufferPool</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="kd">unowned(unsafe)</span> <span class="k">var</span> <span class="nv">pixelBufferPool</span><span class="p">:</span> <span class="kt">CVPixelBufferPool</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-requestedEncryptionType">
+      requestedEncryptionType
+  </h3>
+  
+  <p>The requested encryption type when a session attempts to connect. This setting applies to both video and audio sessions.</p>
+
+<p>DEFAULT: SDLStreamingEncryptionFlagAuthenticateAndEncrypt</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n"><a href="../Enums/SDLStreamingEncryptionFlag.html">SDLStreamingEncryptionFlag</a></span> <span class="n">requestedEncryptionType</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">requestedEncryptionType</span><span class="p">:</span> <span class="kt"><a href="../Enums/SDLStreamingEncryptionFlag.html">SDLStreamingEncryptionFlag</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-showVideoBackgroundDisplay">
+      showVideoBackgroundDisplay
+  </h3>
+  
+  <p>When YES, the StreamingMediaManager will send a black screen with <q>Video Backgrounded String</q>. Defaults to YES.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">showVideoBackgroundDisplay</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">showVideoBackgroundDisplay</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section--init">
+      -init
+  </h3>
+  
+  <p>Undocumented</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="n">init</span> <span class="n">NS_UNAVAILABLE</span><span class="p">;</span></code></pre>
+
+  
+  
+  
+  
+  <h3 id="section--initWithConnectionManager:configuration:">
+      -initWithConnectionManager:configuration:
+  </h3>
+  
+  <p>Create a new streaming media manager for navigation and VPM apps with a specified configuration</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span>
+    <span class="nf">initWithConnectionManager</span><span class="p">:</span>
+        <span class="p">(</span><span class="n">nonnull</span> <span class="n">id</span><span class="o">&lt;</span><span class="n">SDLConnectionManagerType</span><span class="o">&gt;</span><span class="p">)</span><span class="nv">connectionManager</span>
+                <span class="nf">configuration</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/SDLConfiguration.html">SDLConfiguration</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">configuration</span><span class="p">;</span></code></pre>
+
+  
+  
+  
+  <h4>Parameters</h4>
+  <dl>
+      <dt>connectionManager</dt>
+      <dd><p>The pass-through for RPCs</p></dd>
+      <dt>configuration</dt>
+      <dd><p>This session&rsquo;s configuration</p></dd>
+  </dl>
+  <div>
+    <h4>Return Value</h4>
+    <p>A new streaming manager</p>
+  </div>
+  
+  <h3 id="section--startWithProtocol:">
+      -startWithProtocol:
+  </h3>
+  
+  <p>Start the manager with a completion block that will be called when startup completes. This is used internally. To use an SDLStreamingMediaManager, you should use the manager found on <code><a href="../Classes/SDLManager.html">SDLManager</a></code>.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">startWithProtocol</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">SDLProtocol</span> <span class="o">*</span><span class="p">)</span><span class="nv">protocol</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">start</span><span class="p">(</span><span class="n">with</span> <span class="nv">protocol</span><span class="p">:</span> <span class="kt">SDLProtocol</span><span class="p">)</span></code></pre>
+
+  
+  
+  
+  <h3 id="section--startAudioWithProtocol:">
+      -startAudioWithProtocol:
+  </h3>
+  
+  <p>Start the audio feature of the manager. This is used internally. To use an SDLStreamingMediaManager, you should use the manager found on <code><a href="../Classes/SDLManager.html">SDLManager</a></code>.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">startAudioWithProtocol</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">SDLProtocol</span> <span class="o">*</span><span class="p">)</span><span class="nv">protocol</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">startAudio</span><span class="p">(</span><span class="n">with</span> <span class="nv">protocol</span><span class="p">:</span> <span class="kt">SDLProtocol</span><span class="p">)</span></code></pre>
+
+  
+  
+  
+  <h3 id="section--startVideoWithProtocol:">
+      -startVideoWithProtocol:
+  </h3>
+  
+  <p>Start the video feature of the manager. This is used internally. To use an SDLStreamingMediaManager, you should use the manager found on <code><a href="../Classes/SDLManager.html">SDLManager</a></code>.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">startVideoWithProtocol</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">SDLProtocol</span> <span class="o">*</span><span class="p">)</span><span class="nv">protocol</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">startVideo</span><span class="p">(</span><span class="n">with</span> <span class="nv">protocol</span><span class="p">:</span> <span class="kt">SDLProtocol</span><span class="p">)</span></code></pre>
+
+  
+  
+  
+  <h3 id="section--stop">
+      -stop
+  </h3>
+  
+  <p>Stop the manager. This method is used internally.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">stop</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">stop</span><span class="p">()</span></code></pre>
+
+  
+  
+  
+  <h3 id="section--stopAudio">
+      -stopAudio
+  </h3>
+  
+  <p>Stop the audio feature of the manager. This method is used internally.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">stopAudio</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">stopAudio</span><span class="p">()</span></code></pre>
+
+  
+  
+  
+  <h3 id="section--stopVideo">
+      -stopVideo
+  </h3>
+  
+  <p>Stop the video feature of the manager. This method is used internally.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">stopVideo</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">stopVideo</span><span class="p">()</span></code></pre>
+
+  
+  
+  
+  <h3 id="section--sendVideoData:">
+      -sendVideoData:
+  </h3>
+  
+  <p>This method receives raw image data and will run iOS8+&lsquo;s hardware video encoder to turn the data into a video stream, which will then be passed to the connected head unit.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">sendVideoData</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">CVImageBufferRef</span><span class="p">)</span><span class="nv">imageBuffer</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">sendVideoData</span><span class="p">(</span><span class="n">_</span> <span class="nv">imageBuffer</span><span class="p">:</span> <span class="kt">CVImageBuffer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+  
+  
+  <h4>Parameters</h4>
+  <dl>
+      <dt>imageBuffer</dt>
+      <dd><p>A CVImageBufferRef to be encoded by Video Toolbox</p></dd>
+  </dl>
+  <div>
+    <h4>Return Value</h4>
+    <p>Whether or not the data was successfully encoded and sent.</p>
+  </div>
+  
+  <h3 id="section--sendVideoData:presentationTimestamp:">
+      -sendVideoData:presentationTimestamp:
+  </h3>
+  
+  <p>This method receives raw image data and will run iOS8+&lsquo;s hardware video encoder to turn the data into a video stream, which will then be passed to the connected head unit.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">sendVideoData</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">CVImageBufferRef</span><span class="p">)</span><span class="nv">imageBuffer</span>
+    <span class="nf">presentationTimestamp</span><span class="p">:(</span><span class="n">CMTime</span><span class="p">)</span><span class="nv">presentationTimestamp</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">sendVideoData</span><span class="p">(</span><span class="n">_</span> <span class="nv">imageBuffer</span><span class="p">:</span> <span class="kt">CVImageBuffer</span><span class="p">,</span> <span class="nv">presentationTimestamp</span><span class="p">:</span> <span class="kt">CMTime</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+  
+  
+  <h4>Parameters</h4>
+  <dl>
+      <dt>imageBuffer</dt>
+      <dd><p>A CVImageBufferRef to be encoded by Video Toolbox</p></dd>
+      <dt>presentationTimestamp</dt>
+      <dd><p>A presentation timestamp for the frame, or kCMTimeInvalid if timestamp is unknown. If it&rsquo;s valid, it must be greater than the previous one.</p></dd>
+  </dl>
+  <div>
+    <h4>Return Value</h4>
+    <p>Whether or not the data was successfully encoded and sent.</p>
+  </div>
+  
+  <h3 id="section--sendAudioData:">
+      -sendAudioData:
+  </h3>
+  
+  <p>This method receives PCM audio data and will attempt to send that data across to the head unit for immediate playback.</p>
+
+<p>NOTE: See the <code><a href="../Classes/SDLStreamingMediaManager.html#/c:objc(cs)SDLStreamingMediaManager(py)audioManager">.audioManager</a></code> (SDLAudioStreamManager) <code>pushWithData:</code> method for a more modern API.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">sendAudioData</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nv">audioData</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">sendAudioData</span><span class="p">(</span><span class="n">_</span> <span class="nv">audioData</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+  
+  
+  <h4>Parameters</h4>
+  <dl>
+      <dt>audioData</dt>
+      <dd><p>The data in PCM audio format, to be played</p></dd>
+  </dl>
+  <div>
+    <h4>Return Value</h4>
+    <p>Whether or not the data was successfully sent.</p>
+  </div>
+  
+</section>

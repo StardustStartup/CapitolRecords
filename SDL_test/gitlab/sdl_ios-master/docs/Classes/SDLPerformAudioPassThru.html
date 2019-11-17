@@ -1,0 +1,309 @@
+<h1>SDLPerformAudioPassThru Class Reference</h1>
+
+<h3>Section Contents</h3>
+
+<ul>
+  <li><a href="#section--initWithSamplingRate:bitsPerSample:audioType:maxDuration:">-initWithSamplingRate:bitsPerSample:audioType:maxDuration:</a></li>
+  <li><a href="#section--initWithInitialPrompt:audioPassThruDisplayText1:audioPassThruDisplayText2:samplingRate:bitsPerSample:audioType:maxDuration:muteAudio:">-initWithInitialPrompt:audioPassThruDisplayText1:audioPassThruDisplayText2:samplingRate:bitsPerSample:audioType:maxDuration:muteAudio:</a></li>
+  <li><a href="#section--initWithSamplingRate:bitsPerSample:audioType:maxDuration:audioDataHandler:">-initWithSamplingRate:bitsPerSample:audioType:maxDuration:audioDataHandler:</a></li>
+  <li><a href="#section--initWithInitialPrompt:audioPassThruDisplayText1:audioPassThruDisplayText2:samplingRate:bitsPerSample:audioType:maxDuration:muteAudio:audioDataHandler:">-initWithInitialPrompt:audioPassThruDisplayText1:audioPassThruDisplayText2:samplingRate:bitsPerSample:audioType:maxDuration:muteAudio:audioDataHandler:</a></li>
+  <li><a href="#section-initialPrompt">initialPrompt</a></li>
+  <li><a href="#section-audioPassThruDisplayText1">audioPassThruDisplayText1</a></li>
+  <li><a href="#section-audioPassThruDisplayText2">audioPassThruDisplayText2</a></li>
+  <li><a href="#section-samplingRate">samplingRate</a></li>
+  <li><a href="#section-maxDuration">maxDuration</a></li>
+  <li><a href="#section-bitsPerSample">bitsPerSample</a></li>
+  <li><a href="#section-audioType">audioType</a></li>
+  <li><a href="#section-muteAudio">muteAudio</a></li>
+  <li><a href="#section-audioDataHandler">audioDataHandler</a></li>
+</ul>
+
+<h3>Overview</h3>
+
+<p>This will open an audio pass thru session. By doing so the app can receive
+ audio data through the vehicle microphone
+ <p>
+ Function Group: AudioPassThru
+ <p>
+ <b>HMILevel needs to be FULL, LIMITED or BACKGROUND</b>
+ </p></p>
+
+<p><p>Since SmartDeviceLink 2.0</p>
+ <p>See SDLEndAudioPassThru</p></p>
+
+
+<section class="section task-group-section">
+  <h3 id="section--initWithSamplingRate:bitsPerSample:audioType:maxDuration:">
+      -initWithSamplingRate:bitsPerSample:audioType:maxDuration:
+  </h3>
+  
+  <p>Undocumented</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithSamplingRate</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:SDLSamplingRate.h@T@SDLSamplingRate">SDLSamplingRate</a></span><span class="p">)</span><span class="nv">samplingRate</span> <span class="nf">bitsPerSample</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:SDLBitsPerSample.h@T@SDLBitsPerSample">SDLBitsPerSample</a></span><span class="p">)</span><span class="nv">bitsPerSample</span> <span class="nf">audioType</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:SDLAudioType.h@T@SDLAudioType">SDLAudioType</a></span><span class="p">)</span><span class="nv">audioType</span> <span class="nf">maxDuration</span><span class="p">:(</span><span class="n">UInt32</span><span class="p">)</span><span class="nv">maxDuration</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">samplingRate</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLSamplingRate.h@T@SDLSamplingRate">SDLSamplingRate</a></span><span class="p">,</span> <span class="nv">bitsPerSample</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLBitsPerSample.h@T@SDLBitsPerSample">SDLBitsPerSample</a></span><span class="p">,</span> <span class="nv">audioType</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLAudioType.h@T@SDLAudioType">SDLAudioType</a></span><span class="p">,</span> <span class="nv">maxDuration</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">)</span></code></pre>
+
+  
+  
+  
+  <h3 id="section--initWithInitialPrompt:audioPassThruDisplayText1:audioPassThruDisplayText2:samplingRate:bitsPerSample:audioType:maxDuration:muteAudio:">
+      -initWithInitialPrompt:audioPassThruDisplayText1:audioPassThruDisplayText2:samplingRate:bitsPerSample:audioType:maxDuration:muteAudio:
+  </h3>
+  
+  <p>Undocumented</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithInitialPrompt</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">initialPrompt</span> <span class="nf">audioPassThruDisplayText1</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">audioPassThruDisplayText1</span> <span class="nf">audioPassThruDisplayText2</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">audioPassThruDisplayText2</span> <span class="nf">samplingRate</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:SDLSamplingRate.h@T@SDLSamplingRate">SDLSamplingRate</a></span><span class="p">)</span><span class="nv">samplingRate</span> <span class="nf">bitsPerSample</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:SDLBitsPerSample.h@T@SDLBitsPerSample">SDLBitsPerSample</a></span><span class="p">)</span><span class="nv">bitsPerSample</span> <span class="nf">audioType</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:SDLAudioType.h@T@SDLAudioType">SDLAudioType</a></span><span class="p">)</span><span class="nv">audioType</span> <span class="nf">maxDuration</span><span class="p">:(</span><span class="n">UInt32</span><span class="p">)</span><span class="nv">maxDuration</span> <span class="nf">muteAudio</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">muteAudio</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">initialPrompt</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">audioPassThruDisplayText1</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">audioPassThruDisplayText2</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">samplingRate</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLSamplingRate.h@T@SDLSamplingRate">SDLSamplingRate</a></span><span class="p">,</span> <span class="nv">bitsPerSample</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLBitsPerSample.h@T@SDLBitsPerSample">SDLBitsPerSample</a></span><span class="p">,</span> <span class="nv">audioType</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLAudioType.h@T@SDLAudioType">SDLAudioType</a></span><span class="p">,</span> <span class="nv">maxDuration</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">,</span> <span class="nv">muteAudio</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+  
+  
+  
+  <h3 id="section--initWithSamplingRate:bitsPerSample:audioType:maxDuration:audioDataHandler:">
+      -initWithSamplingRate:bitsPerSample:audioType:maxDuration:audioDataHandler:
+  </h3>
+  
+  <p>Undocumented</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithSamplingRate</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:SDLSamplingRate.h@T@SDLSamplingRate">SDLSamplingRate</a></span><span class="p">)</span><span class="nv">samplingRate</span> <span class="nf">bitsPerSample</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:SDLBitsPerSample.h@T@SDLBitsPerSample">SDLBitsPerSample</a></span><span class="p">)</span><span class="nv">bitsPerSample</span> <span class="nf">audioType</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:SDLAudioType.h@T@SDLAudioType">SDLAudioType</a></span><span class="p">)</span><span class="nv">audioType</span> <span class="nf">maxDuration</span><span class="p">:(</span><span class="n">UInt32</span><span class="p">)</span><span class="nv">maxDuration</span> <span class="nf">audioDataHandler</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDLNotificationConstants.h@T@SDLAudioPassThruHandler">SDLAudioPassThruHandler</a></span><span class="p">)</span><span class="nv">audioDataHandler</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">samplingRate</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLSamplingRate.h@T@SDLSamplingRate">SDLSamplingRate</a></span><span class="p">,</span> <span class="nv">bitsPerSample</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLBitsPerSample.h@T@SDLBitsPerSample">SDLBitsPerSample</a></span><span class="p">,</span> <span class="nv">audioType</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLAudioType.h@T@SDLAudioType">SDLAudioType</a></span><span class="p">,</span> <span class="nv">maxDuration</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">,</span> <span class="nv">audioDataHandler</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLNotificationConstants.h@T@SDLAudioPassThruHandler">SDLAudioPassThruHandler</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+  
+  
+  
+  <h3 id="section--initWithInitialPrompt:audioPassThruDisplayText1:audioPassThruDisplayText2:samplingRate:bitsPerSample:audioType:maxDuration:muteAudio:audioDataHandler:">
+      -initWithInitialPrompt:audioPassThruDisplayText1:audioPassThruDisplayText2:samplingRate:bitsPerSample:audioType:maxDuration:muteAudio:audioDataHandler:
+  </h3>
+  
+  <p>Undocumented</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithInitialPrompt</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">initialPrompt</span> <span class="nf">audioPassThruDisplayText1</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">audioPassThruDisplayText1</span> <span class="nf">audioPassThruDisplayText2</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">audioPassThruDisplayText2</span> <span class="nf">samplingRate</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:SDLSamplingRate.h@T@SDLSamplingRate">SDLSamplingRate</a></span><span class="p">)</span><span class="nv">samplingRate</span> <span class="nf">bitsPerSample</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:SDLBitsPerSample.h@T@SDLBitsPerSample">SDLBitsPerSample</a></span><span class="p">)</span><span class="nv">bitsPerSample</span> <span class="nf">audioType</span><span class="p">:(</span><span class="n"><a href="../Type%20Definitions.html#/c:SDLAudioType.h@T@SDLAudioType">SDLAudioType</a></span><span class="p">)</span><span class="nv">audioType</span> <span class="nf">maxDuration</span><span class="p">:(</span><span class="n">UInt32</span><span class="p">)</span><span class="nv">maxDuration</span> <span class="nf">muteAudio</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">muteAudio</span> <span class="nf">audioDataHandler</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDLNotificationConstants.h@T@SDLAudioPassThruHandler">SDLAudioPassThruHandler</a></span><span class="p">)</span><span class="nv">audioDataHandler</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">initialPrompt</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">audioPassThruDisplayText1</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">audioPassThruDisplayText2</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">samplingRate</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLSamplingRate.h@T@SDLSamplingRate">SDLSamplingRate</a></span><span class="p">,</span> <span class="nv">bitsPerSample</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLBitsPerSample.h@T@SDLBitsPerSample">SDLBitsPerSample</a></span><span class="p">,</span> <span class="nv">audioType</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLAudioType.h@T@SDLAudioType">SDLAudioType</a></span><span class="p">,</span> <span class="nv">maxDuration</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">,</span> <span class="nv">muteAudio</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">audioDataHandler</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLNotificationConstants.h@T@SDLAudioPassThruHandler">SDLAudioPassThruHandler</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-initialPrompt">
+      initialPrompt
+  </h3>
+  
+  <p>initial prompt which will be spoken before opening the audio pass
+thru session by SDL
+@discussion initialPrompt
+           a Vector<TTSChunk> value represents the initial prompt which
+           will be spoken before opening the audio pass thru session by
+           SDL
+           <p>
+           <b>Notes: </b>
+           <ul>
+           <li>This is an array of text chunks of type TTSChunk</li>
+           <li>The array must have at least one item</li>
+           <li>If omitted, then no initial prompt is spoken</li>
+           <li>Array Minsize: 1</li>
+           <li>Array Maxsize: 100</li>
+           </ul></p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/SDLTTSChunk.html">SDLTTSChunk</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">initialPrompt</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">initialPrompt</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/SDLTTSChunk.html">SDLTTSChunk</a></span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-audioPassThruDisplayText1">
+      audioPassThruDisplayText1
+  </h3>
+  
+  <p>a line of text displayed during audio capture
+@discussion audioPassThruDisplayText1
+           a String value representing the line of text displayed during
+           audio capture
+           <p>
+           <b>Notes: </b>Maxlength=500</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n">NSString</span> <span class="o">*</span><span class="n">audioPassThruDisplayText1</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">audioPassThruDisplayText1</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-audioPassThruDisplayText2">
+      audioPassThruDisplayText2
+  </h3>
+  
+  <p>A line of text displayed during audio capture
+@discussion audioPassThruDisplayText2
+           a String value representing the line of text displayed during
+           audio capture
+           <p>
+           <b>Notes: </b>Maxlength=500</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n">NSString</span> <span class="o">*</span><span class="n">audioPassThruDisplayText2</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">audioPassThruDisplayText2</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-samplingRate">
+      samplingRate
+  </h3>
+  
+  <p>A samplingRate</p>
+
+<p>@discussion a SamplingRate value representing a 8 or 16 or 22 or 24 khz</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDLSamplingRate.h@T@SDLSamplingRate">SDLSamplingRate</a></span> <span class="n">_Nonnull</span> <span class="n">samplingRate</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">samplingRate</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLSamplingRate.h@T@SDLSamplingRate">SDLSamplingRate</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-maxDuration">
+      maxDuration
+  </h3>
+  
+  <p>the maximum duration of audio recording in milliseconds</p>
+
+<p>@discussion maxDuration
+            an Integer value representing the maximum duration of audio
+            recording in millisecond
+            <p>
+            <b>Notes: </b>Minvalue:1; Maxvalue:1000000</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSNumber</span><span class="o">&lt;</span><span class="n"><a href="../Protocols.html#/c:objc(pl)SDLInt">SDLInt</a></span><span class="o">&gt;</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">maxDuration</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">maxDuration</span><span class="p">:</span> <span class="kt">NSNumber</span> <span class="o">&amp;</span> <span class="kt"><a href="../Protocols.html#/c:objc(pl)SDLInt">SDLInt</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-bitsPerSample">
+      bitsPerSample
+  </h3>
+  
+  <p>the quality the audio is recorded - 8 bit or 16 bit</p>
+
+<p>@discussion a BitsPerSample value representing 8 bit or 16 bit</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDLBitsPerSample.h@T@SDLBitsPerSample">SDLBitsPerSample</a></span> <span class="n">_Nonnull</span> <span class="n">bitsPerSample</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">bitsPerSample</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLBitsPerSample.h@T@SDLBitsPerSample">SDLBitsPerSample</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-audioType">
+      audioType
+  </h3>
+  
+  <p>an audioType</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDLAudioType.h@T@SDLAudioType">SDLAudioType</a></span> <span class="n">_Nonnull</span> <span class="n">audioType</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">audioType</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLAudioType.h@T@SDLAudioType">SDLAudioType</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-muteAudio">
+      muteAudio
+  </h3>
+  
+  <p>a Boolean value representing if the current audio source should be
+muted during the APT session<br/></p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSNumber</span><span class="o">&lt;</span><span class="n"><a href="../Protocols.html#/c:objc(pl)SDLBool">SDLBool</a></span><span class="o">&gt;</span> <span class="o">*</span><span class="n">muteAudio</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">muteAudio</span><span class="p">:</span> <span class="p">(</span><span class="kt">NSNumber</span> <span class="o">&amp;</span> <span class="kt"><a href="../Protocols.html#/c:objc(pl)SDLBool">SDLBool</a></span><span class="p">)?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-audioDataHandler">
+      audioDataHandler
+  </h3>
+  
+  <p>A handler that will be called whenever an <code>onAudioPassThru</code> notification is received.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n"><a href="../Type%20Definitions.html#/c:SDLNotificationConstants.h@T@SDLAudioPassThruHandler">SDLAudioPassThruHandler</a></span> <span class="n">audioDataHandler</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">audioDataHandler</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLNotificationConstants.h@T@SDLAudioPassThruHandler">SDLAudioPassThruHandler</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+</section>

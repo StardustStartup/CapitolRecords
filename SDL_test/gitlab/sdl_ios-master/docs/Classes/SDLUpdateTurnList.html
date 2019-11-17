@@ -1,0 +1,78 @@
+<h1>SDLUpdateTurnList Class Reference</h1>
+
+<h3>Section Contents</h3>
+
+<ul>
+  <li><a href="#section--initWithTurnList:softButtons:">-initWithTurnList:softButtons:</a></li>
+  <li><a href="#section-turnList">turnList</a></li>
+  <li><a href="#section-softButtons">softButtons</a></li>
+</ul>
+
+<h3>Overview</h3>
+
+<p>Updates the list of next maneuvers, which can be requested by the user pressing the softbutton<br></p>
+
+<ul>
+<li>“Turns” on the Navigation base screen. Three softbuttons are predefined by the system: Up, Down, Close.
+*<p></li>
+<li>@since SmartDeviceLink 2.0</li>
+</ul>
+
+
+<section class="section task-group-section">
+  <h3 id="section--initWithTurnList:softButtons:">
+      -initWithTurnList:softButtons:
+  </h3>
+  
+  <p>Undocumented</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithTurnList</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/SDLTurn.html">SDLTurn</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">turnList</span> <span class="nf">softButtons</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/SDLSoftButton.html">SDLSoftButton</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">softButtons</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">turnList</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/SDLTurn.html">SDLTurn</a></span><span class="p">]?,</span> <span class="nv">softButtons</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/SDLSoftButton.html">SDLSoftButton</a></span><span class="p">]?)</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-turnList">
+      turnList
+  </h3>
+  
+  <p>Optional, SDLTurn, 1 - 100 entries</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/SDLTurn.html">SDLTurn</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">turnList</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">turnList</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/SDLTurn.html">SDLTurn</a></span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-softButtons">
+      softButtons
+  </h3>
+  
+  <p>Required, SDLSoftButton, 0 - 1 Entries</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/SDLSoftButton.html">SDLSoftButton</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">softButtons</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">softButtons</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/SDLSoftButton.html">SDLSoftButton</a></span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+</section>

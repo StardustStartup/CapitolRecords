@@ -1,0 +1,127 @@
+<h1>SDLMenuParams Class Reference</h1>
+
+<h3>Section Contents</h3>
+
+<ul>
+  <li><a href="#section--initWithMenuName:">-initWithMenuName:</a></li>
+  <li><a href="#section--initWithMenuName:parentId:position:">-initWithMenuName:parentId:position:</a></li>
+  <li><a href="#section-parentID">parentID</a></li>
+  <li><a href="#section-position">position</a></li>
+  <li><a href="#section-menuName">menuName</a></li>
+</ul>
+
+<h3>Overview</h3>
+
+<p>Used when adding a sub menu to an application menu or existing sub menu.</p>
+
+<p>@since SDL 1.0</p>
+
+
+<section class="section task-group-section">
+  <h3 id="section--initWithMenuName:">
+      -initWithMenuName:
+  </h3>
+  
+  <p>Undocumented</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithMenuName</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">menuName</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">menuName</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+  
+  
+  
+  <h3 id="section--initWithMenuName:parentId:position:">
+      -initWithMenuName:parentId:position:
+  </h3>
+  
+  <p>Undocumented</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithMenuName</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">menuName</span> <span class="nf">parentId</span><span class="p">:(</span><span class="n">UInt32</span><span class="p">)</span><span class="nv">parentId</span> <span class="nf">position</span><span class="p">:(</span><span class="n">UInt16</span><span class="p">)</span><span class="nv">position</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">menuName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">parentId</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">,</span> <span class="nv">position</span><span class="p">:</span> <span class="kt">UInt16</span><span class="p">)</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-parentID">
+      parentID
+  </h3>
+  
+  <p>The unique ID of an existing submenu to which a command will be added</p>
+
+<p>If this element is not provided, the command will be added to the top level of the Command Menu.</p>
+
+<p>Optional, Integer, 0 - 2,000,000,000</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSNumber</span><span class="o">&lt;</span><span class="n"><a href="../Protocols.html#/c:objc(pl)SDLInt">SDLInt</a></span><span class="o">&gt;</span> <span class="o">*</span><span class="n">parentID</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">parentID</span><span class="p">:</span> <span class="p">(</span><span class="kt">NSNumber</span> <span class="o">&amp;</span> <span class="kt"><a href="../Protocols.html#/c:objc(pl)SDLInt">SDLInt</a></span><span class="p">)?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-position">
+      position
+  </h3>
+  
+  <p>The position within the items of the parent Command Menu</p>
+
+<p>0 will insert at the front, 1 will insert after the first existing element, etc.</p>
+
+<p>Position of any submenu will always be located before the return and exit options.</p>
+
+<p>If position is greater or equal than the number of items in the parent Command Menu, the sub menu will be appended to the end of that Command Menu.</p>
+
+<p>If this element is omitted, the entry will be added at the end of the parent menu.</p>
+
+<p>Optional, Integer, 0 - 1000</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSNumber</span><span class="o">&lt;</span><span class="n"><a href="../Protocols.html#/c:objc(pl)SDLInt">SDLInt</a></span><span class="o">&gt;</span> <span class="o">*</span><span class="n">position</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">position</span><span class="p">:</span> <span class="p">(</span><span class="kt">NSNumber</span> <span class="o">&amp;</span> <span class="kt"><a href="../Protocols.html#/c:objc(pl)SDLInt">SDLInt</a></span><span class="p">)?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-menuName">
+      menuName
+  </h3>
+  
+  <p>The menu name which appears in menu, representing this command</p>
+
+<p>Required, max length 500 characters</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">menuName</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">menuName</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+</section>

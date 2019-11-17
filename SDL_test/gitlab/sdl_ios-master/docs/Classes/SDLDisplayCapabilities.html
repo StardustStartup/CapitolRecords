@@ -1,0 +1,234 @@
+<h1>SDLDisplayCapabilities Class Reference</h1>
+
+<h3>Section Contents</h3>
+
+<ul>
+  <li><a href="#section-displayType">displayType</a></li>
+  <li><a href="#section-displayName">displayName</a></li>
+  <li><a href="#section-textFields">textFields</a></li>
+  <li><a href="#section-imageFields">imageFields</a></li>
+  <li><a href="#section-mediaClockFormats">mediaClockFormats</a></li>
+  <li><a href="#section-graphicSupported">graphicSupported</a></li>
+  <li><a href="#section-templatesAvailable">templatesAvailable</a></li>
+  <li><a href="#section-screenParams">screenParams</a></li>
+  <li><a href="#section-numCustomPresetsAvailable">numCustomPresetsAvailable</a></li>
+</ul>
+
+<h3>Overview</h3>
+
+<p>Contains information about the display for the SDL system to which the application is currently connected.</p>
+
+<p>@since SDL 1.0</p>
+
+
+<section class="section task-group-section">
+  <h3 id="section-displayType">
+      displayType
+  </h3>
+  
+  <p>The type of display</p>
+
+<p>Required</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDLDisplayType.h@T@SDLDisplayType">SDLDisplayType</a></span> <span class="n">_Nonnull</span> <span class="n">displayType</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">displayType</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLDisplayType.h@T@SDLDisplayType">SDLDisplayType</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-displayName">
+      displayName
+  </h3>
+  
+  <p>The name of the connected display</p>
+
+<p>Optional</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">displayName</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">displayName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-textFields">
+      textFields
+  </h3>
+  
+  <p>An array of SDLTextField structures, each of which describes a field in the HMI which the application can write to using operations such as <em>SDLShow</em>, <em>SDLSetMediaClockTimer</em>, etc.</p>
+
+<p>@discussion This array of SDLTextField structures identify all the text fields to which the application can write on the current display (identified by SDLDisplayType).</p>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    SDLTextField
+
+</div>
+
+<p>Required, Array of SDLTextField, 1 - 100 objects</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/SDLTextField.html">SDLTextField</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">textFields</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">textFields</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/SDLTextField.html">SDLTextField</a></span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-imageFields">
+      imageFields
+  </h3>
+  
+  <p>An array of SDLImageField elements</p>
+
+<p>@discussion A set of all fields that support images.</p>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    SDLImageField
+
+</div>
+
+<p>Optional, Array of SDLImageField, 1 - 100 objects</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/SDLImageField.html">SDLImageField</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">imageFields</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">imageFields</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/SDLImageField.html">SDLImageField</a></span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-mediaClockFormats">
+      mediaClockFormats
+  </h3>
+  
+  <p>An array of SDLMediaClockFormat elements, defining the valid string formats used in specifying the contents of the media clock field</p>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    SDLMediaClockFormat
+
+</div>
+
+<p>Required, Array of SDLMediaClockFormats, 0 - 100 objects</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Type%20Definitions.html#/c:SDLMediaClockFormat.h@T@SDLMediaClockFormat">SDLMediaClockFormat</a></span><span class="o">&gt;</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">mediaClockFormats</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">mediaClockFormats</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Type%20Definitions.html#/c:SDLMediaClockFormat.h@T@SDLMediaClockFormat">SDLMediaClockFormat</a></span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-graphicSupported">
+      graphicSupported
+  </h3>
+  
+  <p>The display&rsquo;s persistent screen supports.</p>
+
+<p>@since SDL 2.0</p>
+
+<p>Required, Boolean</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">NSNumber</span><span class="o">&lt;</span><span class="n"><a href="../Protocols.html#/c:objc(pl)SDLBool">SDLBool</a></span><span class="o">&gt;</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">graphicSupported</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">graphicSupported</span><span class="p">:</span> <span class="kt">NSNumber</span> <span class="o">&amp;</span> <span class="kt"><a href="../Protocols.html#/c:objc(pl)SDLBool">SDLBool</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-templatesAvailable">
+      templatesAvailable
+  </h3>
+  
+  <p>An array of all predefined persistent display templates available on the head unit.</p>
+
+<p>Optional, Array of String, max string size 100, 0 - 100 objects, since SDL 3.0</p>
+
+<p>See SDLPredefinedLayout</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">templatesAvailable</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">templatesAvailable</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-screenParams">
+      screenParams
+  </h3>
+  
+  <p>A set of all parameters related to a prescribed screen area (e.g. for video / touch input)</p>
+
+<p>Optional</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/SDLScreenParams.html">SDLScreenParams</a></span> <span class="o">*</span><span class="n">screenParams</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">screenParams</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLScreenParams.html">SDLScreenParams</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-numCustomPresetsAvailable">
+      numCustomPresetsAvailable
+  </h3>
+  
+  <p>The number of on-screen custom presets available (if any); otherwise omitted</p>
+
+<p>Optional, Integer 1 - 100</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n">NSNumber</span><span class="o">&lt;</span><span class="n"><a href="../Protocols.html#/c:objc(pl)SDLInt">SDLInt</a></span><span class="o">&gt;</span> <span class="o">*</span><span class="n">numCustomPresetsAvailable</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">numCustomPresetsAvailable</span><span class="p">:</span> <span class="p">(</span><span class="kt">NSNumber</span> <span class="o">&amp;</span> <span class="kt"><a href="../Protocols.html#/c:objc(pl)SDLInt">SDLInt</a></span><span class="p">)?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+</section>

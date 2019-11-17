@@ -1,0 +1,615 @@
+<h1>SDLManager Class Reference</h1>
+
+<h3>Section Contents</h3>
+
+<ul>
+  <li><a href="#section-configuration">configuration</a></li>
+  <li><a href="#section-hmiLevel">hmiLevel</a></li>
+  <li><a href="#section-audioStreamingState">audioStreamingState</a></li>
+  <li><a href="#section-systemContext">systemContext</a></li>
+  <li><a href="#section-fileManager">fileManager</a></li>
+  <li><a href="#section-permissionManager">permissionManager</a></li>
+  <li><a href="#section-streamManager">streamManager</a></li>
+  <li><a href="#section-screenManager">screenManager</a></li>
+  <li><a href="#section-systemCapabilityManager">systemCapabilityManager</a></li>
+  <li><a href="#section-registerResponse">registerResponse</a></li>
+  <li><a href="#section-authToken">authToken</a></li>
+  <li><a href="#section-delegate">delegate</a></li>
+  <li><a href="#section-pendingRPCTransactions">pendingRPCTransactions</a></li>
+  <li><a href="#section-proxy">proxy</a></li>
+  <li><a href="#section--initWithConfiguration:delegate:">-initWithConfiguration:delegate:</a></li>
+  <li><a href="#section--startWithReadyHandler:">-startWithReadyHandler:</a></li>
+  <li><a href="#section--stop">-stop</a></li>
+  <li><a href="#section--startRPCEncryption">-startRPCEncryption</a></li>
+  <li><a href="#section--sendRPC:">-sendRPC:</a></li>
+  <li><a href="#section--sendRequest:">-sendRequest:</a></li>
+  <li><a href="#section--sendRequest:withResponseHandler:">-sendRequest:withResponseHandler:</a></li>
+  <li><a href="#section--sendRequests:progressHandler:completionHandler:">-sendRequests:progressHandler:completionHandler:</a></li>
+  <li><a href="#section--sendSequentialRequests:progressHandler:completionHandler:">-sendSequentialRequests:progressHandler:completionHandler:</a></li>
+  <li><a href="#section--subscribeToRPC:withBlock:">-subscribeToRPC:withBlock:</a></li>
+  <li><a href="#section--subscribeToRPC:withObserver:selector:">-subscribeToRPC:withObserver:selector:</a></li>
+  <li><a href="#section--unsubscribeFromRPC:withObserver:">-unsubscribeFromRPC:withObserver:</a></li>
+</ul>
+
+<h3>Overview</h3>
+
+<p>Undocumented</p>
+
+
+<section class="section task-group-section">
+  <h3 id="section-configuration">
+      configuration
+  </h3>
+  
+  <p>The configuration the manager was set up with.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Classes/SDLConfiguration.html">SDLConfiguration</a></span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">configuration</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="kd">@NSCopying</span> <span class="k">var</span> <span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLConfiguration.html">SDLConfiguration</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-hmiLevel">
+      hmiLevel
+  </h3>
+  
+  <p>The current HMI level of the running app.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDLHMILevel.h@T@SDLHMILevel">SDLHMILevel</a></span> <span class="n">hmiLevel</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">hmiLevel</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLHMILevel.h@T@SDLHMILevel">SDLHMILevel</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-audioStreamingState">
+      audioStreamingState
+  </h3>
+  
+  <p>The current audio streaming state of the running app.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n"><a href="../Type%20Definitions.html#/c:SDLAudioStreamingState.h@T@SDLAudioStreamingState">SDLAudioStreamingState</a></span> <span class="n">_Nonnull</span> <span class="n">audioStreamingState</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">audioStreamingState</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLAudioStreamingState.h@T@SDLAudioStreamingState">SDLAudioStreamingState</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-systemContext">
+      systemContext
+  </h3>
+  
+  <p>The current system context of the running app.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDLSystemContext.h@T@SDLSystemContext">SDLSystemContext</a></span> <span class="n">_Nonnull</span> <span class="n">systemContext</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">systemContext</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLSystemContext.h@T@SDLSystemContext">SDLSystemContext</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-fileManager">
+      fileManager
+  </h3>
+  
+  <p>The file manager to be used by the running app.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Classes/SDLFileManager.html">SDLFileManager</a></span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">fileManager</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">fileManager</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLFileManager.html">SDLFileManager</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-permissionManager">
+      permissionManager
+  </h3>
+  
+  <p>The permission manager monitoring RPC permissions.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SDLPermissionManager.html">SDLPermissionManager</a></span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">permissionManager</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">permissionManager</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLPermissionManager.html">SDLPermissionManager</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-streamManager">
+      streamManager
+  </h3>
+  
+  <p>The streaming media manager to be used for starting video sessions.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SDLStreamingMediaManager.html">SDLStreamingMediaManager</a></span> <span class="o">*</span><span class="n">streamManager</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">streamManager</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLStreamingMediaManager.html">SDLStreamingMediaManager</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-screenManager">
+      screenManager
+  </h3>
+  
+  <p>The screen manager for sending UI related RPCs.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Classes/SDLScreenManager.html">SDLScreenManager</a></span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">screenManager</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">screenManager</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLScreenManager.html">SDLScreenManager</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-systemCapabilityManager">
+      systemCapabilityManager
+  </h3>
+  
+  <p>Centralized manager for retrieving all system capabilities.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SDLSystemCapabilityManager.html">SDLSystemCapabilityManager</a></span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">systemCapabilityManager</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">systemCapabilityManager</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLSystemCapabilityManager.html">SDLSystemCapabilityManager</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-registerResponse">
+      registerResponse
+  </h3>
+  
+  <p>The response of a register call after it has been received.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
+    <span class="n"><a href="../Classes/SDLRegisterAppInterfaceResponse.html">SDLRegisterAppInterfaceResponse</a></span> <span class="o">*</span><span class="n">registerResponse</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">registerResponse</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLRegisterAppInterfaceResponse.html">SDLRegisterAppInterfaceResponse</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-authToken">
+      authToken
+  </h3>
+  
+  <p>The auth token, if received. This should be used to log into a user account. Primarily used for cloud apps with companion app stores.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">authToken</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">authToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-delegate">
+      delegate
+  </h3>
+  
+  <p>The manager&rsquo;s delegate.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SDLManagerDelegate.html">SDLManagerDelegate</a></span><span class="o">&gt;</span> <span class="n">delegate</span><span class="p">;</span></code></pre>
+
+  
+  
+  
+  
+  <h3 id="section-pendingRPCTransactions">
+      pendingRPCTransactions
+  </h3>
+  
+  <p>The currently pending RPC request send transactions</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">__kindof</span> <span class="n">NSOperation</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">pendingRPCTransactions</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">pendingRPCTransactions</span><span class="p">:</span> <span class="p">[</span><span class="kt">Operation</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section-proxy">
+      proxy
+  </h3>
+  
+  <p>Undocumented</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">SDLProxy</span> <span class="o">*</span><span class="n">proxy</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">proxy</span><span class="p">:</span> <span class="kt">SDLProxy</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+  
+  
+  
+  <h3 id="section--initWithConfiguration:delegate:">
+      -initWithConfiguration:delegate:
+  </h3>
+  
+  <p>Initialize the manager with a configuration. Call <code>startWithHandler</code> to begin waiting for a connection.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span>
+    <span class="nf">initWithConfiguration</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/SDLConfiguration.html">SDLConfiguration</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">configuration</span>
+                 <span class="nf">delegate</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SDLManagerDelegate.html">SDLManagerDelegate</a></span><span class="o">&gt;</span><span class="p">)</span><span class="nv">delegate</span><span class="p">;</span></code></pre>
+
+  
+  
+  
+  <h4>Parameters</h4>
+  <dl>
+      <dt>configuration</dt>
+      <dd><p>Your app&rsquo;s unique configuration for setup.</p></dd>
+      <dt>delegate</dt>
+      <dd><p>An optional delegate to be notified of hmi level changes and startup and shutdown. It is recommended that you implement this.</p></dd>
+  </dl>
+  <div>
+    <h4>Return Value</h4>
+    <p>An instance of SDLManager</p>
+  </div>
+  
+  <h3 id="section--startWithReadyHandler:">
+      -startWithReadyHandler:
+  </h3>
+  
+  <p>Start the manager, which will tell it to start looking for a connection. Once one does, it will automatically run the setup process and call the readyBlock when done.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">startWithReadyHandler</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDLManager.h@T@SDLManagerReadyBlock">SDLManagerReadyBlock</a></span><span class="p">)</span><span class="nv">readyHandler</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">start</span><span class="p">(</span><span class="nv">readyHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLManager.h@T@SDLManagerReadyBlock">SDLManagerReadyBlock</a></span><span class="p">)</span></code></pre>
+
+  
+  
+  <h4>Parameters</h4>
+  <dl>
+      <dt>readyHandler</dt>
+      <dd><p>The block called when the manager is ready to be used or an error occurs while attempting to become ready.</p></dd>
+  </dl>
+  
+  <h3 id="section--stop">
+      -stop
+  </h3>
+  
+  <p>Stop the manager, it will disconnect if needed and no longer look for a connection. You probably don&rsquo;t need to call this method ever.</p>
+
+<p>If you do call this method, you must wait for SDLManagerDelegate&rsquo;s managerDidDisconnect callback to call startWithReadyHandler:.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">stop</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">stop</span><span class="p">()</span></code></pre>
+
+  
+  
+  
+  <h3 id="section--startRPCEncryption">
+      -startRPCEncryption
+  </h3>
+  
+  <p>Start the encryption lifecycle manager, which will attempt to open a secure service.</p>
+
+<p>Please call this method in the successful callback of startWithReadyHandler. If you do call this method, you must wait for SDLServiceEncryptionDelegate&rsquo;s serviceEncryptionUpdatedOnService delegate method before you send any encrypted RPCs.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">startRPCEncryption</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">startRPCEncryption</span><span class="p">()</span></code></pre>
+
+  
+  
+  
+  <h3 id="section--sendRPC:">
+      -sendRPC:
+  </h3>
+  
+  <p>Send an RPC of type <code>Response</code>, <code>Notification</code> or <code>Request</code>. Responses and notifications sent to Core do not a response back from Core. Each request sent to Core does get a response, so if you need the response and/or error, call <code>sendRequest:withResponseHandler:</code> instead.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sendRPC</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">__kindof</span> <span class="n"><a href="../Classes/SDLRPCMessage.html">SDLRPCMessage</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">rpc</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">sendRPC</span><span class="p">(</span><span class="n">_</span> <span class="nv">rpc</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLRPCMessage.html">SDLRPCMessage</a></span><span class="p">)</span></code></pre>
+
+  
+  
+  <h4>Parameters</h4>
+  <dl>
+      <dt>rpc</dt>
+      <dd><p>An RPC of type <code><a href="../Classes/SDLRPCResponse.html">SDLRPCResponse</a></code>, <code><a href="../Classes.html#/c:objc(cs)SDLRPCNotification">SDLRPCNotification</a></code> or <code><a href="../Classes/SDLRPCRequest.html">SDLRPCRequest</a></code></p></dd>
+  </dl>
+  
+  <h3 id="section--sendRequest:">
+      -sendRequest:
+  </h3>
+  
+  <p>Send an RPC request and don&rsquo;t bother with the response or error. If you need the response or error, call sendRequest:withCompletionHandler: instead.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sendRequest</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/SDLRPCRequest.html">SDLRPCRequest</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">request</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">send</span><span class="p">(</span><span class="n">_</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLRPCRequest.html">SDLRPCRequest</a></span><span class="p">)</span></code></pre>
+
+  
+  
+  <h4>Parameters</h4>
+  <dl>
+      <dt>request</dt>
+      <dd><p>The RPC request to send</p></dd>
+  </dl>
+  
+  <h3 id="section--sendRequest:withResponseHandler:">
+      -sendRequest:withResponseHandler:
+  </h3>
+  
+  <p>Send an RPC request and set a completion handler that will be called with the response when the response returns.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sendRequest</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/SDLRPCRequest.html">SDLRPCRequest</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">request</span>
+    <span class="nf">withResponseHandler</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDLNotificationConstants.h@T@SDLResponseHandler">SDLResponseHandler</a></span><span class="p">)</span><span class="nv">handler</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">send</span><span class="p">(</span><span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Classes/SDLRPCRequest.html">SDLRPCRequest</a></span><span class="p">,</span> <span class="n">responseHandler</span> <span class="nv">handler</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLNotificationConstants.h@T@SDLResponseHandler">SDLResponseHandler</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+  
+  
+  <h4>Parameters</h4>
+  <dl>
+      <dt>request</dt>
+      <dd><p>The RPC request to send</p></dd>
+      <dt>handler</dt>
+      <dd><p>The handler that will be called when the response returns</p></dd>
+  </dl>
+  
+  <h3 id="section--sendRequests:progressHandler:completionHandler:">
+      -sendRequests:progressHandler:completionHandler:
+  </h3>
+  
+  <p>Send all of the requests given as quickly as possible, but in order. Call the completionHandler after all requests have either failed or given a response.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sendRequests</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/SDLRPCRequest.html">SDLRPCRequest</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">requests</span>
+      <span class="nf">progressHandler</span><span class="p">:</span>
+          <span class="p">(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDLNotificationConstants.h@T@SDLMultipleAsyncRequestProgressHandler">SDLMultipleAsyncRequestProgressHandler</a></span><span class="p">)</span><span class="nv">progressHandler</span>
+    <span class="nf">completionHandler</span><span class="p">:</span>
+        <span class="p">(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDLNotificationConstants.h@T@SDLMultipleRequestCompletionHandler">SDLMultipleRequestCompletionHandler</a></span><span class="p">)</span><span class="nv">completionHandler</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">send</span><span class="p">(</span><span class="n">_</span> <span class="nv">requests</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/SDLRPCRequest.html">SDLRPCRequest</a></span><span class="p">],</span> <span class="nv">progressHandler</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLNotificationConstants.h@T@SDLMultipleAsyncRequestProgressHandler">SDLMultipleAsyncRequestProgressHandler</a></span><span class="p">?,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLNotificationConstants.h@T@SDLMultipleRequestCompletionHandler">SDLMultipleRequestCompletionHandler</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+  
+  
+  <h4>Parameters</h4>
+  <dl>
+      <dt>requests</dt>
+      <dd><p>The requests to be sent</p></dd>
+      <dt>progressHandler</dt>
+      <dd><p>A handler called every time a response is received</p></dd>
+      <dt>completionHandler</dt>
+      <dd><p>A handler to call when all requests have been responded to</p></dd>
+  </dl>
+  
+  <h3 id="section--sendSequentialRequests:progressHandler:completionHandler:">
+      -sendSequentialRequests:progressHandler:completionHandler:
+  </h3>
+  
+  <p>Send all of the requests one at a time, with the next one going out only after the previous one has received a response. Call the completionHandler after all requests have either failed or given a response.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sendSequentialRequests</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/SDLRPCRequest.html">SDLRPCRequest</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">requests</span>
+               <span class="nf">progressHandler</span><span class="p">:</span>
+                   <span class="p">(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDLNotificationConstants.h@T@SDLMultipleSequentialRequestProgressHandler">SDLMultipleSequentialRequestProgressHandler</a></span><span class="p">)</span>
+                       <span class="n">progressHandler</span>
+             <span class="n">completionHandler</span><span class="o">:</span><span class="p">(</span><span class="n">nullable</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDLNotificationConstants.h@T@SDLMultipleRequestCompletionHandler">SDLMultipleRequestCompletionHandler</a></span><span class="p">)</span>
+                                   <span class="n">completionHandler</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">sendSequential</span><span class="p">(</span><span class="nv">requests</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/SDLRPCRequest.html">SDLRPCRequest</a></span><span class="p">],</span> <span class="nv">progressHandler</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLNotificationConstants.h@T@SDLMultipleSequentialRequestProgressHandler">SDLMultipleSequentialRequestProgressHandler</a></span><span class="p">?,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLNotificationConstants.h@T@SDLMultipleRequestCompletionHandler">SDLMultipleRequestCompletionHandler</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+  
+  
+  <h4>Parameters</h4>
+  <dl>
+      <dt>requests</dt>
+      <dd><p>The requests to be sent</p></dd>
+      <dt>progressHandler</dt>
+      <dd><p>A handler called every time a response is received. Return NO to cancel any requests that have not yet been sent, YES to continue sending requests.</p></dd>
+      <dt>completionHandler</dt>
+      <dd><p>A handler to call when all requests have been responded to</p></dd>
+  </dl>
+  
+  <h3 id="section--subscribeToRPC:withBlock:">
+      -subscribeToRPC:withBlock:
+  </h3>
+  
+  <p>Subscribe to callbacks about a particular RPC request, notification, or response with a block callback.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">id</span><span class="p">)</span><span class="nf">subscribeToRPC</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDLNotificationConstants.h@T@SDLNotificationName">SDLNotificationName</a></span><span class="p">)</span><span class="nv">rpcName</span>
+                   <span class="nf">withBlock</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDLManager.h@T@SDLRPCUpdatedBlock">SDLRPCUpdatedBlock</a></span><span class="p">)</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">subscribe</span><span class="p">(</span><span class="n">to</span> <span class="nv">rpcName</span><span class="p">:</span> <span class="kt">NSNotification</span><span class="o">.</span><span class="kt">Name</span><span class="p">,</span> <span class="nv">block</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Type%20Definitions.html#/c:SDLManager.h@T@SDLRPCUpdatedBlock">SDLRPCUpdatedBlock</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span></code></pre>
+
+  
+  
+  <h4>Parameters</h4>
+  <dl>
+      <dt>rpcName</dt>
+      <dd><p>The name of the RPC request, response, or notification to subscribe to.</p></dd>
+      <dt>block</dt>
+      <dd><p>The block that will be called every time an RPC of the name and type specified is received.</p></dd>
+  </dl>
+  <div>
+    <h4>Return Value</h4>
+    <p>An object that can be passed to <code>unsubscribeFromRPC:ofType:withObserver:</code> to unsubscribe the block.</p>
+  </div>
+  
+  <h3 id="section--subscribeToRPC:withObserver:selector:">
+      -subscribeToRPC:withObserver:selector:
+  </h3>
+  
+  <p>Subscribe to callbacks about a particular RPC request, notification, or response with a selector callback.</p>
+
+<p>The selector supports the following parameters:</p>
+
+<ol>
+<li>Zero parameters e.g. <code>- (void)registerAppInterfaceResponse</code></li>
+<li>One parameter e.g. <code>- (void)registerAppInterfaceResponse:(NSNotification *)notification;</code></li>
+</ol>
+
+<p>Note that using this method to get a response instead of the <code>sendRequest:withResponseHandler:</code> method of getting a response, you will not be notifed of any <code><a href="../Classes.html#/c:objc(cs)SDLGenericResponse">SDLGenericResponse</a></code> errors where the head unit doesn&rsquo;t understand the request.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">subscribeToRPC</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDLNotificationConstants.h@T@SDLNotificationName">SDLNotificationName</a></span><span class="p">)</span><span class="nv">rpcName</span>
+          <span class="nf">withObserver</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">id</span><span class="p">)</span><span class="nv">observer</span>
+              <span class="nf">selector</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">SEL</span><span class="p">)</span><span class="nv">selector</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">subscribe</span><span class="p">(</span><span class="n">to</span> <span class="nv">rpcName</span><span class="p">:</span> <span class="kt">NSNotification</span><span class="o">.</span><span class="kt">Name</span><span class="p">,</span> <span class="nv">observer</span><span class="p">:</span> <span class="kt">Any</span><span class="p">,</span> <span class="nv">selector</span><span class="p">:</span> <span class="kt">Selector</span><span class="p">)</span></code></pre>
+
+  
+  
+  <h4>Parameters</h4>
+  <dl>
+      <dt>rpcName</dt>
+      <dd><p>The name of the RPC request, response, or notification to subscribe to.</p></dd>
+      <dt>observer</dt>
+      <dd><p>The object that will have its selector called every time an RPC of the name and type specified is received.</p></dd>
+      <dt>selector</dt>
+      <dd><p>The selector on <code>observer</code> that will be called every time an RPC of the name and type specified is received.</p></dd>
+  </dl>
+  
+  <h3 id="section--unsubscribeFromRPC:withObserver:">
+      -unsubscribeFromRPC:withObserver:
+  </h3>
+  
+  <p>Unsubscribe to callbacks about a particular RPC request, notification, or response.</p>
+
+  
+  
+  <h4>Objective-C</h4>
+  <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">unsubscribeFromRPC</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:SDLNotificationConstants.h@T@SDLNotificationName">SDLNotificationName</a></span><span class="p">)</span><span class="nv">rpcName</span>
+              <span class="nf">withObserver</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">id</span><span class="p">)</span><span class="nv">observer</span><span class="p">;</span></code></pre>
+
+  
+  <h4>Swift</h4>
+  <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">unsubscribe</span><span class="p">(</span><span class="n">from</span> <span class="nv">rpcName</span><span class="p">:</span> <span class="kt">NSNotification</span><span class="o">.</span><span class="kt">Name</span><span class="p">,</span> <span class="nv">observer</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span></code></pre>
+
+  
+  
+  <h4>Parameters</h4>
+  <dl>
+      <dt>rpcName</dt>
+      <dd><p>The name of the RPC request, response, or notification to unsubscribe from.</p></dd>
+      <dt>observer</dt>
+      <dd><p>The object representing a block callback or selector callback to be unsubscribed</p></dd>
+  </dl>
+  
+</section>
