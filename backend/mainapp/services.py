@@ -15,8 +15,8 @@ def request_song_info(song_title, artist_name):
 def lyrics_from_song_api_path(song_api_path):
   song_url = base_url + song_api_path
   response = requests.get(song_url, headers=headers)
-  json = response.json()
-  path = json["response"]["song"]["path"]
+  myjson = response.json()
+  path = myjson["response"]["song"]["path"]
   #gotta go regular html scraping... come on Genius
   page_url = "http://genius.com" + path
   page = requests.get(page_url)
@@ -29,10 +29,10 @@ def lyrics_from_song_api_path(song_api_path):
 
 def getSongLyric(song_title, artist_name):
   response = request_song_info(song_title, artist_name)
-  json = response.json()
+  myjson = response.json()
   remote_song_path = None
 
-  for hit in json['response']['hits']:
+  for hit in myjson['response']['hits']:
       if artist_name.lower() in hit['result']['primary_artist']['name'].lower():
           remote_song_path = hit['result']['api_path']
           break
@@ -45,8 +45,8 @@ def getSongLyric(song_title, artist_name):
 def fact_from_song_api_path(song_api_path):
   song_url = base_url + song_api_path
   response = requests.get(song_url, headers=headers)
-  json = response.json()
-  path = json["response"]["song"]["path"]
+  myjson = response.json()
+  path = myjson["response"]["song"]["path"]
   #gotta go regular html scraping... come on Genius
   page_url = "http://genius.com" + path
   page = requests.get(page_url)
@@ -60,10 +60,10 @@ def fact_from_song_api_path(song_api_path):
 
 def getSongFact(song_title, artist_name):
   response = request_song_info(song_title, artist_name)
-  json = response.json()
+  myjson = response.json()
   remote_song_path = None
 
-  for hit in json['response']['hits']:
+  for hit in myjson['response']['hits']:
       if artist_name.lower() in hit['result']['primary_artist']['name'].lower():
           remote_song_path = hit['result']['api_path']
           break
