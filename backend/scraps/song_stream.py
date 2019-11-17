@@ -2,39 +2,23 @@ import requests
 import json
 import os
 
+base_url = 'https://hackathon.umusic.com/prod/v1'
+headers = {"x-api-key": os.environ.get("UMG_KEY")}
 
-def getSongAPI(songName, artist):
-  #curl -X GET 'https://hackathon.umusic.com/prod/v1/search/artists?q=elvis' -H 'x-api-key: YOUR_TOKEN'
-  pass
+def request_artist(artist):72
+  search_url = base_url + '/search/artists'
+  data = {'q': artist_name}
+  response = requests.get(search_url, data=data, headers=headers)
 
-def getSongStream(songName, artist):  
-  pass
-
-def getSongMeta(songName, artist):
-  pass
-
-def tester(priorSongFact, nextSongName, nextArtist, nextArtistFact, outFile):
+  return response
 
 
-
-  url = "https://hackathon.umusic.com/prod/v1/search/artists?q=" + nextArtist.replace(" ", "+") + "+" + nextSongName.replace(" ", "+")
-  authenticator = IAMAuthenticator(os.environ.get("WATSON_KEY"))
-  text_to_speech = TextToSpeechV1(
-      authenticator=authenticator
-  )
-
-  with open(outFile, 'wb') as audio_file:
-      audio_file.write(
-          text_to_speech.synthesize(
-              compiledText,
-              voice='en-US_MichaelV3Voice',
-              accept='audio/wav'        
-          ).get_result().content)
+def api_call(artist, song):
+  response = request_artist(artist)
 
 
 #createRadio("beep is a big fookin chungis bigga ligga tigga bit.", "bruh", "boop", "skraa", "bruh.wav")
 
 artist = "Eminem"
 songName = "Rap God"
-print(strr)
-print(strr.replace(" ", "+"))
+print(request_artist(artist).json())
