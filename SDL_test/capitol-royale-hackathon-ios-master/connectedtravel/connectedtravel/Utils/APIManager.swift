@@ -35,7 +35,7 @@ extension APIError: LocalizedError {
 
 // Ticketmaster Key
 #warning("ENTER YOUR TICKETMASTER API KEY")
-fileprivate let ticketmasterKey = "<<----ENTER YOUR KEY HERE---->>"
+fileprivate let ticketmasterKey = "7FDHQhlPd0e5aFWJcCRQonYtuKwlksZu"
 
 class APIManager {
 
