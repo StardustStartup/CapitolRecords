@@ -2,6 +2,9 @@ from django.shortcuts import render
 from .models import Artist, Song, Concert
 from .serializers import ArtistSerializer, SongSerializer, ConcertSerializer
 from rest_framework.generics import ListCreateAPIView,RetrieveUpdateDestroyAPIView
+from django.views.generic.base import TemplateView
+import services
+from django.http import HttpResponse
 
 # Create your views here.
 class ArtistList(ListCreateAPIView):
@@ -27,3 +30,8 @@ class ConcertList(ListCreateAPIView):
 class ConcertDetail(RetrieveUpdateDestroyAPIView):
     queryset = Concert.objects.all()
     serializer_class = ConcertSerializer
+
+class GeniusWrapper(TemplateView):
+    def get(self, request):
+        output = services.getSongFact("Rap God", "Eminem")
+        return HttpResponse(output, content_type='application/json')
