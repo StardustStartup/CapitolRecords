@@ -18,6 +18,7 @@ import TripScreen from './screens/TripScreen';
 import JourneyScreen from './screens/JourneyScreen';
 import PlayerScreen from './screens/PlayerScreen';
 
+console.disableYellowBox = true;
 
 const HomeStack = createStackNavigator(
   {

@@ -51,40 +51,67 @@ const items = [{
 
 const items2 = [{
   id: '1',
-  name: '1'
+  name: 'Alternative Pop'
 }, {
   id: '2',
-  name: '2'
+  name: 'Alternative Rock'
 }, {
   id: '3',
-  name: '3'
+  name: 'Blues'
 }, {
   id: '4',
-  name: '4'
+  name: 'Brazilian'
 }, {
   id: '5',
-  name: '5'
+  name: 'Classic Pop'
 }, {
   id: '6',
-  name: '6'
+  name: 'Classic Rock'
 }, {
   id: '7',
-  name: '7'
+  name: 'Classical'
 }, {
   id: '8',
-  name: '8'
+  name: 'Country'
 }, {
   id: '9',
-  name: '9'
+  name: 'Dance'
 }, {
   id: '10',
-  name: '10'
+  name: 'Electronic'
 }, {
   id: '11',
-  name: '11'
+  name: 'Folk'
 }, {
   id: '12',
-  name: '12'
+  name: 'Gospel'
+}, {
+  id: '13',
+  name: 'Hip Hop'
+}, {
+  id: '14',
+  name: 'Jazz'
+}, {
+  id: '15',
+  name: 'Latin'
+}, {
+  id: '16',
+  name: 'Metal'
+}, {
+  id: '17',
+  name: 'Modern Pop'
+}, {
+  id: '18',
+  name: 'Pop Rock'
+}, {
+  id: '19',
+  name: 'Reggae'
+}, {
+  id: '20',
+  name: 'R&B'
+}, {
+  id: '21',
+  name: 'Spoken'
 }]
 
 
@@ -104,43 +131,20 @@ class screen extends React.Component {
   render() {
     const { selectedItems, selectedItems2 } = this.state;
 
-    const list = [
-      {
-        title: 'Appointments',
-        icon: 'av-timer'
-      },
-      {
-        title: 'Trips',
-        icon: 'flight-takeoff'
-      },
-    ]
-
 
     const {navigate} = this.props.navigation;
     return (
-      <View>
-      <Button
-        title="Go to Player"
-        onPress={() => navigate('Player')}
-      />
-      {
-          list.map((item, i) => (
-            <ListItem
-              key={i}
-              title={item.title}
-              leftIcon={{ name: item.icon }}
-              bottomDivider
-              chevron
-              onPress={() => navigate('Player', {name: 'Jane'})}
-            />
-          ))
-        }
+      <View
+        style={{
+          padding: 20,
+        }}>
+                    <Text>{'\n'}</Text>
         <MultiSelect
             items={items2}
             uniqueKey='id'
             onSelectedItemsChange={this.onSelectedItemsChange}
             selectedItems={selectedItems}
-            selectText='Select the mood!'
+            selectText='Choose a Genre!'
             searchInputPlaceholderText='Search Items...'
             tagRemoveIconColor='#CCC'
             tagBorderColor='#CCC'
@@ -154,6 +158,8 @@ class screen extends React.Component {
             submitButtonText='Submit'
             removeSelected
           />
+                    <Text>{'\n'}</Text>
+
           <MultiSelect
             items={items}
             uniqueKey='id'
@@ -173,6 +179,14 @@ class screen extends React.Component {
             submitButtonText='Submit'
             removeSelected
           />
+          <Text>{'\n'}{'\n'}</Text>
+
+<Button
+              title="Submit"
+              type="outline"
+              raised="True"
+              onPress={() => navigate('Player')}
+            />
 </View>
     );
   }

@@ -9,10 +9,16 @@ import {
   Alert
 } from 'react-native';
 import { Button, Text } from 'react-native-elements';
+import Loader from 'react-native-mask-loader';
+
 
 
 class screen extends React.Component {
+
+  
+
   render() {
+
     const {navigate} = this.props.navigation;
     return (
       <View style={styles.container}>
@@ -32,27 +38,20 @@ class screen extends React.Component {
           <View style={styles.getStartedContainer}>
 
             <Text h4>{"\n"}Welcome to Stardust!{"\n"}</Text>
-            <Text>Let's go on a...{"\n"}{"\n"}</Text>
+            <Text>Your personal radio DJ!{"\n"}{"\n"}</Text>
           </View>
-          <View style={styles.fixToText}>
+          <View
+            style={{
+              padding: 20,
+            }}>
             <Button
-              title="Roadtrip"
-              type="outline"
-              raised="True"
-              onPress={() => navigate('Player')}
-            />
-            <Button
-              title="Journey"
+              title="Get Started"
               type="outline"
               raised="True"
               onPress={() => navigate('Journey')}
             />
           </View>
           <Text>{'\n'}{'\n'}</Text>
-          <View style={styles.fixToText}>
-          <Text>testing what {'\n'}happens if {'\n'}i write a {'\n'}bunch of {'\n'}text here</Text>
-          <Text>                                       changing the type of                                        text im suing here</Text>
-          </View>
       </ScrollView>
       </View>
     );
