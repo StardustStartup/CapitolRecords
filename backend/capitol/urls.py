@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from mainapp.views import ArtistList, ArtistDetail, SongList, SongDetail, ConcertList, ConcertDetail, GeniusWrapper
+from mainapp.views import ArtistList, ArtistDetail, SongList, SongDetail, ConcertList, ConcertDetail, GeniusWrapper, FSMList, FSMDetail
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,4 +26,7 @@ urlpatterns = [
     path('concerts/', ConcertList.as_view()),
     path('concerts/<int:pk>', ConcertDetail.as_view()),
     path('geniuswrapper', GeniusWrapper.as_view()),
+    path('fsm/', FSMList.as_view()),
+    path('fsm/<int:pk>', FSMDetail.as_view()),
+    
 ]
