@@ -3,7 +3,7 @@ from .models import Artist, Song, Concert
 from .serializers import ArtistSerializer, SongSerializer, ConcertSerializer
 from rest_framework.generics import ListCreateAPIView,RetrieveUpdateDestroyAPIView
 from django.views.generic.base import TemplateView
-import services
+from mainapp import services
 from django.http import HttpResponse
 
 # Create your views here.
