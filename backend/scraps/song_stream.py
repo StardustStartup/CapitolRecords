@@ -19,31 +19,61 @@ def get_artist_id(artist):
   return artist_id
 
 def get_song_hit(artist_id,hit):
-  works_url = base_url + '/works/' + str(artist_id)
-  response = requests.get(works_url, headers=headers)
+  artists_url = base_url + '/artists/' + str(artist_id)
+  response = requests.get(artists_url, headers=headers).json()['artist']['tracks'][hit]['title']
   return response
 
-def request_meta(track):
-  track_url = base_url + '/tracks/' + track
-  response = requests.get(track_url, headers=headers)
+def request_song_isrc(artist_id,song_name):
+  artists_url = base_url + '/artists/' + str(artist_id)
+  response = requests.get(artists_url, headers=headers).json()['artist']['tracks']
+  song_find = response[0]['title']
+  song_index = 0
 
-  return response
+  while(song_find != song_name):
+    song_index = song_index + 1
+    song_find = response[song_index]['title']
+  
+  return response[song_index]['isrc']
+
 
 def request_stream(track):
   track_url = base_url + '/isrc/' + track + '/stream.m3u8'
   response = requests.get(track_url, headers=headers)
 
-  return response
+  return track_url
 
+def request_url(artist,song):
+  artist_id = get_artist_id(artist)
+  song_isrc = request_song_isrc(artist_id,song)
+  stream = request_stream(song_isrc)
+  return stream
 
+def load_file(artist,song):
+  url = request_url(artist,song)
+  content = (requests.get(url, headers=headers)).text
+  return(content)
+  #filename = song + ".m3u8"
+  #file = open(filename, "w")
+  #file.write(content)
+  #file.close()
 
-artist = "Eminem"
-songName = "Rap God"
-track = "USWWW0128853"
+artist1 = "Jeremy Zucker"
+song1 = "History (Of The World) (Part 2)"
+artist_id1 = get_artist_id(artist1)
+print(artist_id1)
+print(get_song_hit(artist_id1,0))
 
-artist_id = get_artist_id(artist)
-song_0 = get_song_hit(artist_id,0)
-print(song_0.json())
+artist2 = "The Doors"
+song2 = "Away From The Sun"
+artist_id2 = get_artist_id(artist2)
+print(artist_id2)
+print(get_song_hit(artist_id2,0))
+#load_file(artist,song)
 
+print(request_url(artist1,song1))
+print(request_url(artist2,song2))
+
+#https://hackathon.umusic.com/prod/v1/isrc/DEF069011180/stream.m3u8
+#https://hackathon.umusic.com/prod/v1/isrc/USUG10701458/stream.m3u8
 #print(request_stream(track))
 
